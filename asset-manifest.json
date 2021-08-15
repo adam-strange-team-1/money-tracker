@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/money-tracker/static/css/main.a617e044.chunk.css",
-    "main.js": "/money-tracker/static/js/main.76373abf.chunk.js",
-    "main.js.map": "/money-tracker/static/js/main.76373abf.chunk.js.map",
+    "main.js": "/money-tracker/static/js/main.0d3b0382.chunk.js",
+    "main.js.map": "/money-tracker/static/js/main.0d3b0382.chunk.js.map",
     "runtime-main.js": "/money-tracker/static/js/runtime-main.ede0a6eb.js",
     "runtime-main.js.map": "/money-tracker/static/js/runtime-main.ede0a6eb.js.map",
     "static/js/2.d80f5101.chunk.js": "/money-tracker/static/js/2.d80f5101.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.ede0a6eb.js",
     "static/js/2.d80f5101.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.76373abf.chunk.js"
+    "static/js/main.0d3b0382.chunk.js"
   ]
 }
