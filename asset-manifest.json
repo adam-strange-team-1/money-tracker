@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/money-tracker/static/css/main.a617e044.chunk.css",
+    "main.css": "/money-tracker/static/css/main.5739ad41.chunk.css",
     "main.js": "/money-tracker/static/js/main.0d3b0382.chunk.js",
     "main.js.map": "/money-tracker/static/js/main.0d3b0382.chunk.js.map",
     "runtime-main.js": "/money-tracker/static/js/runtime-main.ede0a6eb.js",
@@ -10,14 +10,14 @@
     "static/js/3.a5763b0b.chunk.js": "/money-tracker/static/js/3.a5763b0b.chunk.js",
     "static/js/3.a5763b0b.chunk.js.map": "/money-tracker/static/js/3.a5763b0b.chunk.js.map",
     "index.html": "/money-tracker/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/money-tracker/static/css/main.a617e044.chunk.css.map",
+    "static/css/main.5739ad41.chunk.css.map": "/money-tracker/static/css/main.5739ad41.chunk.css.map",
     "static/js/2.d80f5101.chunk.js.LICENSE.txt": "/money-tracker/static/js/2.d80f5101.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/money-tracker/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ede0a6eb.js",
     "static/js/2.d80f5101.chunk.js",
-    "static/css/main.a617e044.chunk.css",
+    "static/css/main.5739ad41.chunk.css",
     "static/js/main.0d3b0382.chunk.js"
   ]
 }
