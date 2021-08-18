@@ -1,0 +1,44 @@
+.library-body{
+  /* position: absolute; */
+  left: 300px;
+  /* color: black; */
+  width: 60%;
+  /* background-color: #F6F8FD; */
+}
+.table-wrapper{
+  width: 80%;
+}
+.table-nav{
+  width: 100%;
+}
+.table-btn{
+  width: 50%;
+  background-color: white;
+  border: none;
+}
+.table-btn:first-child{
+  border-radius: 10px 0 0 0;
+}
+.table-btn:last-child{
+  border-radius: 0 10px 0 0;
+}
+.table-btn.active{
+  background-color: rgba(125, 109, 197, 1);
+  color: #fff;
+}
+.table-btn:hover{
+  background-color: rgba(125, 109, 197, 1);
+  color: #fff;
+}
+.container{
+  background-color: #fff;
+}
+.table > :not(:last-child) > :last-child > *{
+  background-color: rgba(125, 109, 197, 0.86);
+}
+.table-striped > tbody > tr:nth-of-type(2n+1){
+  background-color: rgba(125, 109, 197, 0.15);
+}
+.table > :not(caption) > * > *{
+  border: none;
+}
