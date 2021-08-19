@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SideBar = styled.div`
   width: 290px;
-  height: 1024px;
+  height: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -54,7 +54,7 @@ export const LogoLineBottom = styled.div`
 
 export const SideBarInner = styled.div`
   width: 214px;
-  height: 800px;
+  height: 80%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
