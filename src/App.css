@@ -1,11 +1,12 @@
 body {
   width: 100%;
-  height: 8100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   background-color: #f4f7fe;
 }
-.side_bar {
+
+/* .side_bar {
   width: 290px;
   height: 1024px;
   position: fixed;
@@ -31,14 +32,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   height: 220px;
 }
 .logo {
-  width: 214px;
+  width: 229px;
   margin: 10px 0;
   display: flex;
   align-items: center;
   color: #635992;
+}
+.line_logo_bottom {
+  width: 100%;
+  border: 1px solid #f4f7fe;
 }
 .text_logo {
   margin-left: 12px;
@@ -48,12 +54,14 @@ body {
   display: flex;
 }
 .text_logo_money {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 27px;
   line-height: 100%;
 }
 .text_logo > span {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -63,8 +71,8 @@ a {
   text-decoration: none;
 }
 .frame {
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
   width: 214px;
   height: 45px;
   border-radius: 4px;
@@ -72,7 +80,19 @@ a {
   padding-left: 15px;
   color: #a3aed0;
 }
+path {
+  fill: #a3aed0;
+}
+.frame > span {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  margin-left: 10px;
+}
 .frame:hover {
   background-color: #635992;
   color: #fff;
+  transition: all 0.5s ease;
 }
+.frame:hover path {
+  fill: #fff;
+} */
