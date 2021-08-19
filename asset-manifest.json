@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/money-tracker/static/css/main.3e908477.chunk.css",
-    "main.js": "/money-tracker/static/js/main.dc5cc39f.chunk.js",
-    "main.js.map": "/money-tracker/static/js/main.dc5cc39f.chunk.js.map",
-    "runtime-main.js": "/money-tracker/static/js/runtime-main.a0bf9443.js",
-    "runtime-main.js.map": "/money-tracker/static/js/runtime-main.a0bf9443.js.map",
-    "static/js/2.b1d49ddb.chunk.js": "/money-tracker/static/js/2.b1d49ddb.chunk.js",
-    "static/js/2.b1d49ddb.chunk.js.map": "/money-tracker/static/js/2.b1d49ddb.chunk.js.map",
-    "static/js/3.e677947d.chunk.js": "/money-tracker/static/js/3.e677947d.chunk.js",
-    "static/js/3.e677947d.chunk.js.map": "/money-tracker/static/js/3.e677947d.chunk.js.map",
+    "main.css": "/money-tracker/static/css/main.ca759586.chunk.css",
+    "main.js": "/money-tracker/static/js/main.b25ef632.chunk.js",
+    "main.js.map": "/money-tracker/static/js/main.b25ef632.chunk.js.map",
+    "runtime-main.js": "/money-tracker/static/js/runtime-main.05da39ed.js",
+    "runtime-main.js.map": "/money-tracker/static/js/runtime-main.05da39ed.js.map",
+    "static/js/2.3e7b9044.chunk.js": "/money-tracker/static/js/2.3e7b9044.chunk.js",
+    "static/js/2.3e7b9044.chunk.js.map": "/money-tracker/static/js/2.3e7b9044.chunk.js.map",
+    "static/js/3.10f3eb5b.chunk.js": "/money-tracker/static/js/3.10f3eb5b.chunk.js",
+    "static/js/3.10f3eb5b.chunk.js.map": "/money-tracker/static/js/3.10f3eb5b.chunk.js.map",
     "index.html": "/money-tracker/index.html",
-    "static/css/main.3e908477.chunk.css.map": "/money-tracker/static/css/main.3e908477.chunk.css.map",
-    "static/js/2.b1d49ddb.chunk.js.LICENSE.txt": "/money-tracker/static/js/2.b1d49ddb.chunk.js.LICENSE.txt"
+    "static/css/main.ca759586.chunk.css.map": "/money-tracker/static/css/main.ca759586.chunk.css.map",
+    "static/js/2.3e7b9044.chunk.js.LICENSE.txt": "/money-tracker/static/js/2.3e7b9044.chunk.js.LICENSE.txt",
+    "static/media/logo-icon.60bfdcd4.svg": "/money-tracker/static/media/logo-icon.60bfdcd4.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a0bf9443.js",
-    "static/js/2.b1d49ddb.chunk.js",
-    "static/css/main.3e908477.chunk.css",
-    "static/js/main.dc5cc39f.chunk.js"
+    "static/js/runtime-main.05da39ed.js",
+    "static/js/2.3e7b9044.chunk.js",
+    "static/css/main.ca759586.chunk.css",
+    "static/js/main.b25ef632.chunk.js"
   ]
 }
