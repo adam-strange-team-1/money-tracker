@@ -76,6 +76,10 @@ export const SideBarBottom = styled.div`
   align-items: center;
 `;
 
+export const Icon = styled.path`
+  fill: #a3aed0;
+`;
+
 export const Frame = styled.div`
   display: flex;
   align-items: center;
@@ -86,6 +90,9 @@ export const Frame = styled.div`
   padding-left: 15px;
   color: #a3aed0;
   &:hover {
+    ${Icon} {
+      fill: #fff;
+    }
     background-color: #635992;
     color: #fff;
     transition: all 0.5s ease;
