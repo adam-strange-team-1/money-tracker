@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function SmallSpending() {
     return (
         <div className="small_spending">

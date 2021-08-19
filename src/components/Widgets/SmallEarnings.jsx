@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function SmallEarnings() {
     return (
         <div className="small_earnings">

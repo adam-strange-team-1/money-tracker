@@ -17,6 +17,7 @@ import {
   Icon,
 } from "./components/styledComponents";
 import Settings from "./components/SettingsComponent";
+import Widget from "./components/Widgets/Widget";
 
 function DashboardComponent() {
   return <div></div>;
