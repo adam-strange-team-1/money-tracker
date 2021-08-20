@@ -9,14 +9,13 @@ import "../Widgets/style/Widget.css";
 
 function Widget() {
     return (
-      <div className="Widget-1">
+      <div className="Widget">
         <SmallActivity />
         <SmallSpending />
         <SmallChart />
         <SmallEarnings />
         <LargeInput />
-
-       </div>
+      </div>
     );
   }
 
