@@ -4,12 +4,12 @@ import SmallSpending from "./components/Widgets/SmallSpending";
 import SmallChart from "./components/Widgets/SmallChart";
 import SmallEarnings from "./components/Widgets/SmallEarnings";
 import LargeInput from "./components/Widgets/LargeInput";
-import "../Widgets/Widget.css";
+import "../Widgets/style";
 
 
 function Widget() {
     return (
-      <div className="Widget">
+      <div className="Widget-1">
         <SmallActivity />
         <SmallSpending />
         <SmallChart />

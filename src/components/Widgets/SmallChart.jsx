@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function SmallChart() {
     return (
         <div className="small_chart">
