@@ -4,7 +4,7 @@ import SmallSpending from "./components/Widgets/SmallSpending";
 import SmallChart from "./components/Widgets/SmallChart";
 import SmallEarnings from "./components/Widgets/SmallEarnings";
 import LargeInput from "./components/Widgets/LargeInput";
-import "../Widgets/style";
+import "../Widgets/style/Widget.css";
 
 
 function Widget() {
