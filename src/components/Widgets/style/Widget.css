@@ -8,18 +8,27 @@ body {
     height: 46px;
     top: 67px;
     left: 1062px;
-    background: linear-gradient(135deg, #CCCEFB 0%, #453D69 100%);
-    border-radius: 20px;
+    border: #FFFFFF;
+    
 }
 
-.circleInput {
+/*.iconSearch {
+    position: absolute;
     width: 10px;
     height: 10px;
     margin-left: 20px;
-    margin-top: calc(50% - 20px/2 -1px);
-    border: 1.4px solid #1B2559;
+    margin-top: 30px;
     box-sizing: border-box;
-}
+}*/
+
+/*.input {
+    position: absolute;
+    width: 341px;
+    height: 46px;
+    top: 67px;
+    left: 1062px;
+    border: #FFFFFF;
+}*/
 
 .small_activity {
     position: absolute;
