@@ -92,6 +92,7 @@ export const Frame = styled.div`
   &:hover {
     ${Icon} {
       fill: #fff;
+      transition: all 0.5s ease;
     }
     background-color: #635992;
     color: #fff;
