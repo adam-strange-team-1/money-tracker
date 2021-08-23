@@ -1,5 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  background: rgb(243, 247, 255);
 }
 
 .App-logo {
