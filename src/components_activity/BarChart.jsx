@@ -44,7 +44,13 @@ const options = {
   },
   plugins: {
     tooltip: {
-      enabled: false,
+      enabled: false
+      // {filter: function(TooltipData) {
+      //   if(data.datasets[0]) {
+      //     return true
+      //   }else return false
+      // }
+      // }
     },
     legend: {
       display: false,
