@@ -67,8 +67,8 @@ body {
 }
 a {
   text-decoration: none;
-}
-.frame {
+}*/
+/* a {
   display: flex;
   align-items: center;
   width: 214px;
@@ -78,19 +78,33 @@ a {
   padding-left: 15px;
   color: #a3aed0;
 }
+
 path {
   fill: #a3aed0;
 }
-.frame > span {
+a > span {
   font-family: "DM Sans", sans-serif;
   font-style: normal;
   margin-left: 10px;
 }
-.frame:hover {
-  background-color: #635992;
-  color: #fff;
+a:hover {
+  color: #645992;
   transition: all 0.5s ease;
 }
-.frame:hover path {
+a:hover path {
+  fill: #645992;
+  transition: all 0.5s ease;
+}
+.active {
+  background-color: #635992;
+  color: #fff;
+}
+.active path {
+  fill: #fff;
+}
+.active:hover {
+  color: #fff;
+}
+.active:hover path {
   fill: #fff;
 } */
