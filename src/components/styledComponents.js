@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const SideBar = styled.div`
   width: 290px;
@@ -80,7 +81,7 @@ export const Icon = styled.path`
   fill: #a3aed0;
 `;
 
-export const Frame = styled.div`
+export const Nav = styled(NavLink)`
   display: flex;
   align-items: center;
   width: 214px;
@@ -91,16 +92,22 @@ export const Frame = styled.div`
   color: #a3aed0;
   &:hover {
     ${Icon} {
-      fill: #fff;
+      fill: #645992;
       transition: all 0.5s ease;
     }
+    color: #645992;
+    transition: all 0.5s ease;
+  }
+  &.active {
     background-color: #635992;
     color: #fff;
-    transition: all 0.5s ease;
+  }
+  &.active ${Icon} {
+    fill: #fff;
   }
 `;
 
-export const FrameText = styled.span`
+export const NavText = styled.span`
   font-family: "DM Sans", sans-serif;
   font-style: normal;
   margin-left: 10px;
