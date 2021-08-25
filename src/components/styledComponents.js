@@ -1,6 +1,15 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+export const Wrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f7fe;
+`;
+
 export const SideBar = styled.div`
   width: 290px;
   height: 100%;
