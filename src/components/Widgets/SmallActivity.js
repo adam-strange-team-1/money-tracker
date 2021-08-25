@@ -3,12 +3,12 @@ import React from "react";
 export default function SmallActivity() {
     return (
         <div className="small_activity">
-            <p className="text-activity">
+            <h4 className="text-activity">
                 Activity
-            </p>
-            <p className="cash-activity">
+            </h4>
+            <h1 className="cash-activity">
                 $540.50
-            </p>
+            </h1>
             <svg className="chart-activity" width="92" height="44" viewBox="0 0 92 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.5 41.5C2.5 41.5 8.77975 -6.00537 24.5 16C40.2203 38.0054 46.5 36.9946 52.5 20C59.9168 -1.0075 87.258 17.0806 90 2" stroke="url(#paint0_linear)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 <defs>

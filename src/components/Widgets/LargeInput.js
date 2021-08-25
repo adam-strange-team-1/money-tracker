@@ -25,7 +25,7 @@ class LargeInput extends React.Component {
     render() {
         return (
             <div className="largeInput">
-                <input type="text" className="input" value = {this.state.searchTerm} onChange = {this.editSearchTerm} placeholder="Search for a category" />
+                <input type="text" className="input" value = {this.state.searchTerm} onChange = {this.editSearchTerm} placeholder="Search" />
                 <br></br>
                 <categorysContainer names = {this.dynamicSearch()}/>
                 <svg className="iconSearch" width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
