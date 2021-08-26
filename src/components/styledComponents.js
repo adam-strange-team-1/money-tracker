@@ -121,4 +121,3 @@ export const NavText = styled.span`
   font-style: normal;
   margin-left: 10px;
 `;
-
