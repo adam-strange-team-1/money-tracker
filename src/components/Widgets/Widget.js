@@ -1,25 +1,23 @@
 import React from "react";
-import SmallActivity from "../Widgets/SmallActivity";
-import SmallSpending from "../Widgets/SmallSpending";
-import SmallChart from "../Widgets/SmallChart";
-import SmallEarnings from "../Widgets/SmallEarnings";
-import LargeInput from "../Widgets/LargeInput";
-import "../Widgets/style/Widget.css";
+import SmallActivity from "./SmallActivity";
+import SmallSpending from "./SmallSpending";
+import SmallChart from "./SmallChart";
+import SmallEarnings from "./SmallEarnings";
+import LargeInput from "./LargeInput";
+import { Flex } from "./WidgetsStyle";
 
-
-function Widget() {
-    return (
-      <div className="Widgets">
-        <SmallActivity />
-        <SmallSpending />
-        <SmallChart />
-        <SmallEarnings />
-        <LargeInput />
-      </div>
-    );
-  }
-
-  export default Widget;
-
-
-
+export default function Widgets() {
+  return (
+    <Flex
+      height="100vh"
+      direction="column"
+      justify="space-between"
+      align="center"
+    >
+      <SmallActivity />
+      <SmallSpending />
+      <SmallChart />
+      <SmallEarnings />
+    </Flex>
+  );
+}
