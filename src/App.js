@@ -16,7 +16,7 @@ import {
   NavText,
   Icon,
 } from "./components/styledComponents";
-import Settings from "./components/SettingsComponent.js";
+import Settings from "./components/SettingsComponent";
 
 function DashboardComponent() {
   return <div></div>;
