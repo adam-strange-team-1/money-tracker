@@ -15,7 +15,7 @@ export const Header = styled.div`
   color: #635992;
 `;
 export const SettingsForms = styled.div`
-  width: 65%;
+  width: 80%;
   background-color: #fff;
   border-radius: 20px;
   margin: 152px 0 0 28px;

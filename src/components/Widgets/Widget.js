@@ -9,10 +9,11 @@ import { Flex } from "./WidgetsStyle";
 export default function Widgets() {
   return (
     <Flex
-      height="100vh"
+      max-height="100%"
       direction="column"
       justify="space-between"
       align="center"
+      margin="100px 15px 30px 0"
     >
       <SmallActivity />
       <SmallSpending />

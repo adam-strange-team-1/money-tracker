@@ -102,12 +102,14 @@ export default function App() {
           </SideBarBottom>
         </SideBarInner>
       </SideBar>
+     
       <Switch>
         <Route exact path="/" component={DashboardComponent}></Route>
         <Route path="/activity" component={ActivityComponent}></Route>
         <Route path="/library" component={LibraryComponent}></Route>
         <Route path="/settings" component={SettingsComponent}></Route>
       </Switch>
+      <Widget/>
     </Wrapper>
   );
 }

@@ -13,6 +13,7 @@ import {
   Input,
   Button,
 } from "./SettingsStyleComp";
+import { Flex } from "./Widgets/WidgetsStyle";
 
 export default function Settings() {
   const [inputName, setInputName] = React.useState("");
@@ -47,7 +48,7 @@ export default function Settings() {
   };
 
   return (
-    <div className="settings_wrapper" style={{ marginLeft: "290px" }}>
+    <Flex direction="column" margin="0 0 0 20vw" width="100%" align="center">
       <Header>Settings</Header>
       <SettingsForms>
         <Form>
@@ -93,6 +94,6 @@ export default function Settings() {
 
         <Form></Form>
       </SettingsForms>
-    </div>
+    </Flex>
   );
 }

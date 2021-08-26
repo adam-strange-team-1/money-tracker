@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const Wrapper = styled.div`
+display:flex;
+justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +13,7 @@ export const Wrapper = styled.div`
 `;
 
 export const SideBar = styled.div`
-  width: 290px;
+  width: 20vw;
   height: 100%;
   position: fixed;
   z-index: 1;
