@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/money-tracker/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/money-tracker/static/js/main.281fbaa2.chunk.js",
-    "main.js.map": "/money-tracker/static/js/main.281fbaa2.chunk.js.map",
-    "runtime-main.js": "/money-tracker/static/js/runtime-main.05da39ed.js",
-    "runtime-main.js.map": "/money-tracker/static/js/runtime-main.05da39ed.js.map",
-    "static/js/2.2751b8dd.chunk.js": "/money-tracker/static/js/2.2751b8dd.chunk.js",
-    "static/js/2.2751b8dd.chunk.js.map": "/money-tracker/static/js/2.2751b8dd.chunk.js.map",
-    "static/js/3.10f3eb5b.chunk.js": "/money-tracker/static/js/3.10f3eb5b.chunk.js",
-    "static/js/3.10f3eb5b.chunk.js.map": "/money-tracker/static/js/3.10f3eb5b.chunk.js.map",
+    "main.css": "/money-tracker/static/css/main.627d9f85.chunk.css",
+    "main.js": "/money-tracker/static/js/main.b089682e.chunk.js",
+    "main.js.map": "/money-tracker/static/js/main.b089682e.chunk.js.map",
+    "runtime-main.js": "/money-tracker/static/js/runtime-main.912b3dac.js",
+    "runtime-main.js.map": "/money-tracker/static/js/runtime-main.912b3dac.js.map",
+    "static/js/2.4620a80e.chunk.js": "/money-tracker/static/js/2.4620a80e.chunk.js",
+    "static/js/2.4620a80e.chunk.js.map": "/money-tracker/static/js/2.4620a80e.chunk.js.map",
+    "static/js/3.5bcae75c.chunk.js": "/money-tracker/static/js/3.5bcae75c.chunk.js",
+    "static/js/3.5bcae75c.chunk.js.map": "/money-tracker/static/js/3.5bcae75c.chunk.js.map",
     "index.html": "/money-tracker/index.html",
-    "static/css/main.2ae47eeb.chunk.css.map": "/money-tracker/static/css/main.2ae47eeb.chunk.css.map",
-    "static/js/2.2751b8dd.chunk.js.LICENSE.txt": "/money-tracker/static/js/2.2751b8dd.chunk.js.LICENSE.txt",
-    "static/media/logo-icon.08619c25.svg": "/money-tracker/static/media/logo-icon.08619c25.svg"
+    "static/css/main.627d9f85.chunk.css.map": "/money-tracker/static/css/main.627d9f85.chunk.css.map",
+    "static/js/2.4620a80e.chunk.js.LICENSE.txt": "/money-tracker/static/js/2.4620a80e.chunk.js.LICENSE.txt",
+    "static/media/logo-icon.37e6e90c.svg": "/money-tracker/static/media/logo-icon.37e6e90c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.05da39ed.js",
-    "static/js/2.2751b8dd.chunk.js",
-    "static/css/main.2ae47eeb.chunk.css",
-    "static/js/main.281fbaa2.chunk.js"
+    "static/js/runtime-main.912b3dac.js",
+    "static/js/2.4620a80e.chunk.js",
+    "static/css/main.627d9f85.chunk.css",
+    "static/js/main.b089682e.chunk.js"
   ]
 }
