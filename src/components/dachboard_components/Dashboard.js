@@ -7,7 +7,7 @@ export default function Dashboard() {
       <Text fontSize="14px" lineHeight="24px" color="#707EAE">Hi Charles,</Text>
       <TitleStyled>Welcome to MONEY tracker!</TitleStyled>
       <Flex margin="30px 0 0 0" direction="row" justify="space-between">
-        <InfoBlocks padding="20px 20px 5px">
+        <InfoBlocks padding="30px 10px 0" width = "43%">
           <Flex direction="column" justify="center" align="center">
             <Img
               src="https://images.pexels.com/photos/1936801/pexels-photo-1936801.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -67,12 +67,12 @@ export default function Dashboard() {
             </Flex>
           </Flex>
         </InfoBlocks>
-        <InfoBlocks padding="15px 20px 10px">
+        <InfoBlocks padding="30px 0 0 20px" width = "43%">
           <Flex direction="column" align="start">
             <Text fontSize="20px" lineHeight="32px">
               Your transactions
             </Text>
-            <Flex direction="column" height="75%">
+            <Flex direction="column" margin="10% 0 0 0 " height="60%">
               <Flex align="center">
                 <Img
                   height="48px"
@@ -148,7 +148,7 @@ export default function Dashboard() {
             height="30px"
             justify="flex-end"
             align="center"
-            margin="-40px 0 0 -40px"
+            margin="-60px 0 0 -60px"
           >
             <Text color="#7D6DC5">View all</Text>
           </Flex>

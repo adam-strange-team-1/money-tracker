@@ -9,7 +9,7 @@ export const SideBar = styled.div`
   top: 0;
   left: 0;
   background-color: #fff;
-  overflow-x: hidden;
+  ${'' /* overflow-x: hidden; */}
   padding-top: 20px;
   display: flex;
   flex-direction: column;

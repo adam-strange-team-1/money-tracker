@@ -4,7 +4,7 @@ import { Flex, SVG, WidgetWrapper, Text } from "./WidgetsStyle";
 export default function SmallSpending() {
   return (
     <WidgetWrapper background="white">
-      <Flex margin="0 0 0 -30%" justify="start" align="center">
+      <Flex margin="0 0 0 -25%" justify="start" align="center">
         <SVG
           className="icon-spending"
           width="56"

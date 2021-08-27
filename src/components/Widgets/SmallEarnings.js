@@ -4,7 +4,7 @@ import { Text, Flex, SVG, WidgetWrapper } from "./WidgetsStyle";
 export default function SmallEarnings() {
   return (
     <WidgetWrapper background="white">
-      <Flex margin="0 0 0 -30%" justify="start" align="center">
+      <Flex margin="0 0 0 -25%" justify="start" align="center">
         <SVG
           className="icon-earnings"
           width="56"
