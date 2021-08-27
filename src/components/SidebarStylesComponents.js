@@ -1,19 +1,8 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-export const Wrapper = styled.div`
-display:flex;
-justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f4f7fe;
-`;
-
 export const SideBar = styled.div`
-  width: 20vw;
+  width: 18vw;
   height: 100%;
   position: fixed;
   z-index: 1;
@@ -29,10 +18,11 @@ export const SideBar = styled.div`
 
 export const Logo = styled.div`
   width: 229px;
-  margin: 10px 0;
+  margin: 40px;
+  margin-right: 0;
   display: flex;
   align-items: center;
-  color: #635992;
+  color: #7D6DC5;;
 `;
 
 export const LogoText = styled.div`
@@ -65,8 +55,8 @@ export const LogoLineBottom = styled.div`
 `;
 
 export const SideBarInner = styled.div`
-  width: 214px;
-  height: 80%;
+  width: 18vw;
+  height: 75%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -95,22 +85,22 @@ export const Icon = styled.path`
 export const Nav = styled(NavLink)`
   display: flex;
   align-items: center;
-  width: 214px;
+  width: 80%;
   height: 45px;
-  border-radius: 4px;
+  border-radius: 5px;
   text-decoration: none;
-  padding-left: 15px;
+  padding-left: 30px;
   color: #a3aed0;
   &:hover {
     ${Icon} {
-      fill: #645992;
+      fill: #7D6DC5;
       transition: all 0.5s ease;
     }
-    color: #645992;
+    color: #7D6DC5;
     transition: all 0.5s ease;
   }
   &.active {
-    background-color: #635992;
+    background-color: #7D6DC5;;
     color: #fff;
   }
   &.active ${Icon} {
@@ -119,7 +109,7 @@ export const Nav = styled(NavLink)`
 `;
 
 export const NavText = styled.span`
-  font-family: "DM Sans", sans-serif;
-  font-style: normal;
-  margin-left: 10px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  margin-left: 8px;
 `;

@@ -3,11 +3,11 @@ import { Flex, TitleStyled, Img, Text, InfoBlocks } from "./DashboardStyled";
 
 export default function Dashboard() {
   return (
-    <Flex direction="column" margin="50px 0 0 500px " align="start">
+    <Flex direction="column" margin="65px 0 0 20vw" width="55vw" align="start" height="100%">
       <Text fontSize="14px" lineHeight="24px" color="#707EAE">Hi Charles,</Text>
       <TitleStyled>Welcome to MONEY tracker!</TitleStyled>
-      <Flex margin="75px 0 0 0" width="750px" direction="row" justify="space-between">
-        <InfoBlocks padding="1%">
+      <Flex margin="30px 0 0 0" direction="row" justify="space-between">
+        <InfoBlocks padding="20px 20px 5px">
           <Flex direction="column" justify="center" align="center">
             <Img
               src="https://images.pexels.com/photos/1936801/pexels-photo-1936801.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -154,7 +154,7 @@ export default function Dashboard() {
           </Flex>
         </InfoBlocks>
       </Flex>
-      <InfoBlocks margin="82px 0 95px 0" width="743px" height="316px">
+      <InfoBlocks margin="0 0 95px 0" width= "100%" height="400px">
         <Flex justify="center" align="center">графік</Flex>
       </InfoBlocks>
     </Flex>

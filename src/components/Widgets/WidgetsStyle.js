@@ -16,11 +16,14 @@ export const Flex = (props) => {
 };
 
 const WidgetWrapperStyled = styled.div`
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: -0.02em;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: ${(props) => props.width || "355px"};
-  height: ${(props) => props.height || "110px"};
+  min-width: "295px";
+  width: ${(props) => props.width || "22vw"};
+  height: ${(props) => props.height || "14vh"};
   background: ${(props) => props.background || "#8083B9"};
   padding: ${(props) => props.padding || "0"};
   border-radius: 20px;
@@ -31,8 +34,8 @@ export const WidgetWrapper = (props) => {
 };
 
 const SVGStyled = styled.svg`
-  width: ${(props) => props.width || "355px"};
-  height: ${(props) => props.height || "110px"};
+  width: ${(props) => props.width || "22vw"};
+  height: ${(props) => props.height || "14vh"};
 `;
 
 export const SVG = (props) => {
@@ -41,8 +44,8 @@ export const SVG = (props) => {
 
 const TextStyled = styled.div`
   color: ${(props) => props.color || "#E9EDF7"};
-  font-size: ${(props) => props.size || "16px"};
-  font-weight: ${(props) => props.weight || "bold"};
+  font-size: ${(props) => props.size || "14px"};
+  font-weight: ${(props) => props.weight || "600"};
 `;
 
 export const Text = (props) => {

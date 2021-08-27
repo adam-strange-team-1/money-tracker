@@ -13,7 +13,7 @@ export default function Widgets() {
       direction="column"
       justify="space-between"
       align="center"
-      margin="100px 15px 30px 0"
+      margin="70px 15px 30px 0"
     >
       <SmallActivity />
       <SmallSpending />

@@ -1,8 +1,6 @@
-// import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 import logo from "./img/logo-icon.svg";
 import {
-  Wrapper,
   SideBar,
   Logo,
   LogoText,
@@ -15,12 +13,14 @@ import {
   Nav,
   NavText,
   Icon,
-} from "./components/styledComponents";
-import Settings from "./components/SettingsComponent";
+} from "./components/SidebarStylesComponents";
+import { Wrapper } from "./components/common/StyledComponents";
+import Settings from "./components/settings_components/SettingsComponent";
 import Widget from "./components/Widgets/Widget";
+import Dashboard from "./components/dachboard_components/Dashboard";
 
 function DashboardComponent() {
-  return <div></div>;
+  return <Dashboard />;
 }
 
 function ActivityComponent() {
@@ -36,6 +36,7 @@ function SettingsComponent() {
 }
 
 export default function App() {
+  const match = useRouteMatch();
   return (
     <Wrapper>
       <SideBar>
@@ -102,14 +103,14 @@ export default function App() {
           </SideBarBottom>
         </SideBarInner>
       </SideBar>
-     
+
       <Switch>
         <Route exact path="/" component={DashboardComponent}></Route>
         <Route path="/activity" component={ActivityComponent}></Route>
         <Route path="/library" component={LibraryComponent}></Route>
         <Route path="/settings" component={SettingsComponent}></Route>
       </Switch>
-      <Widget/>
+      <Widget />
     </Wrapper>
   );
 }
