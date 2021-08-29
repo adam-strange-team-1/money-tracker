@@ -9,20 +9,41 @@ export const SideBar = styled.div`
   top: 0;
   left: 0;
   background-color: #fff;
-  ${'' /* overflow-x: hidden; */}
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 1200px) {
+    width: 10vw;
+    justify-content: center;
+  }
+  @media (max-width: 650px) {
+    width: 100vw;
+    height: 5vh;
+    flex-direction: row;
+    align-items: center;
+    padding:20px 0;
+    top: 90vh;
+  }
 `;
 
 export const Logo = styled.div`
-  width: 229px;
+  width: 18vw;
   margin: 40px;
   margin-right: 0;
   display: flex;
   align-items: center;
-  color: #7D6DC5;;
+  color: #7d6dc5;
+  @media (max-width: 1200px) {
+    width: 5vw;
+    height: 5vw;
+    margin: 0;
+    justify-content: center;
+    padding-bottom: 50%;
+  }
+  @media (max-width: 650px) {
+    display: none;
+  }
 `;
 
 export const LogoText = styled.div`
@@ -31,6 +52,9 @@ export const LogoText = styled.div`
   height: 39px;
   flex-direction: column;
   display: flex;
+  @media (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const LogoTextTop = styled.div`
@@ -52,6 +76,11 @@ export const LogoTextBottom = styled.span`
 export const LogoLineBottom = styled.div`
   width: 100%;
   border: 1px solid #f4f7fe;
+  @media (max-width: 650px) {
+    display: none;
+    width: 1px;
+    height: 100%;
+  }
 `;
 
 export const SideBarInner = styled.div`
@@ -61,6 +90,16 @@ export const SideBarInner = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 1200px) {
+    width: 5vw;
+  }
+  @media (max-width: 650px) {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `;
 
 export const SideBarInnerTop = styled.div`
@@ -68,7 +107,15 @@ export const SideBarInnerTop = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 220px;
+  height: 40%;
+  @media (max-width: 1200px) {
+height: 75%;
+  }
+  @media (max-width: 650px) {
+    flex-direction: row;
+    width: 75%;
+    height: 100%;
+  }
 `;
 
 export const SideBarBottom = styled.div`
@@ -76,6 +123,13 @@ export const SideBarBottom = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 1200px) {
+height: 30%;
+  }
+  @media (max-width: 650px) {
+    flex-direction: row;
+    width: 25%;
+  }
 `;
 
 export const Icon = styled.path`
@@ -91,16 +145,21 @@ export const Nav = styled(NavLink)`
   text-decoration: none;
   padding-left: 30px;
   color: #a3aed0;
+  @media (max-width: 1200px) {
+    justify-content: center;
+    padding-left: 0;
+  }
+  
   &:hover {
     ${Icon} {
-      fill: #7D6DC5;
+      fill: #7d6dc5;
       transition: all 0.5s ease;
     }
-    color: #7D6DC5;
+    color: #7d6dc5;
     transition: all 0.5s ease;
   }
   &.active {
-    background-color: #7D6DC5;;
+    background-color: #7d6dc5;
     color: #fff;
   }
   &.active ${Icon} {
@@ -112,4 +171,7 @@ export const NavText = styled.span`
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
   margin-left: 8px;
+  @media (max-width: 1200px) {
+    display: none;
+  }
 `;
