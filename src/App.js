@@ -3,7 +3,9 @@ import logo from "./img/logo-icon.svg";
 import {
   SideBar,
   Logo,
+  LogoPhone,
   LogoText,
+  LogoTextPhone,
   LogoTextTop,
   LogoTextBottom,
   LogoLineBottom,
@@ -39,6 +41,13 @@ export default function App() {
   const match = useRouteMatch();
   return (
     <Wrapper>
+      <LogoPhone>
+        <img src={logo} alt="" />
+        <LogoTextPhone>
+          <LogoTextTop>MONEY</LogoTextTop>
+          <LogoTextBottom>tracker</LogoTextBottom>
+        </LogoTextPhone>
+      </LogoPhone>
       <SideBar>
         <Logo>
           <img src={logo} alt="" />
@@ -62,7 +71,10 @@ export default function App() {
               </svg>
               <NavText>Dashboard</NavText>
             </Nav>
-            <Nav to={`${match.url}/activity`} style={{ textDecoration: "none" }}>
+            <Nav
+              to={`${match.url}/activity`}
+              style={{ textDecoration: "none" }}
+            >
               <svg
                 width="24"
                 height="24"
@@ -88,7 +100,10 @@ export default function App() {
             </Nav>
           </SideBarInnerTop>
           <SideBarBottom>
-            <Nav to={`${match.url}/settings`} style={{ textDecoration: "none" }}>
+            <Nav
+              to={`${match.url}/settings`}
+              style={{ textDecoration: "none" }}
+            >
               <svg
                 width="24"
                 height="24"
@@ -105,10 +120,23 @@ export default function App() {
       </SideBar>
 
       <Switch>
-        <Route exact path={`${match.path}/`} component={DashboardComponent}></Route>
-        <Route path={`${match.path}/activity`} component={ActivityComponent}></Route>
-        <Route path={`${match.path}/library`} component={LibraryComponent}></Route>
-        <Route path={`${match.path}/settings`} component={SettingsComponent}></Route>
+        <Route
+          exact
+          path={`${match.path}/`}
+          component={DashboardComponent}
+        ></Route>
+        <Route
+          path={`${match.path}/activity`}
+          component={ActivityComponent}
+        ></Route>
+        <Route
+          path={`${match.path}/library`}
+          component={LibraryComponent}
+        ></Route>
+        <Route
+          path={`${match.path}/settings`}
+          component={SettingsComponent}
+        ></Route>
       </Switch>
       <Widget />
     </Wrapper>

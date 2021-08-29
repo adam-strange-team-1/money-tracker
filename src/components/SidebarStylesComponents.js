@@ -22,7 +22,7 @@ export const SideBar = styled.div`
     height: 5vh;
     flex-direction: row;
     align-items: center;
-    padding:20px 0;
+    padding: 20px 0;
     top: 90vh;
   }
 `;
@@ -46,6 +46,21 @@ export const Logo = styled.div`
   }
 `;
 
+export const LogoPhone = styled(Logo)`
+  display: none;
+  @media (max-width: 650px) {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0 30px;
+    margin: 0 15px 20px;
+    border-bottom: 1px solid #a3aed0;
+  }
+`;
+
 export const LogoText = styled.div`
   margin-left: 12px;
   width: 96px;
@@ -57,12 +72,27 @@ export const LogoText = styled.div`
   }
 `;
 
+export const LogoTextPhone = styled(LogoText)`
+  display: none;
+  @media (max-width: 650px) {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 40px;
+  }
+`;
+
 export const LogoTextTop = styled.div`
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 27px;
   line-height: 100%;
+  @media (max-width: 650px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 `;
 
 export const LogoTextBottom = styled.span`
@@ -71,6 +101,10 @@ export const LogoTextBottom = styled.span`
   font-weight: 500;
   font-size: 12px;
   line-height: 100%;
+  @media (max-width: 650px) {
+    font-size: 10px;
+    line-height: 5px;
+  }
 `;
 
 export const LogoLineBottom = styled.div`
@@ -109,7 +143,7 @@ export const SideBarInnerTop = styled.div`
   align-items: center;
   height: 40%;
   @media (max-width: 1200px) {
-height: 75%;
+    height: 75%;
   }
   @media (max-width: 650px) {
     flex-direction: row;
@@ -124,11 +158,12 @@ export const SideBarBottom = styled.div`
   justify-content: space-around;
   align-items: center;
   @media (max-width: 1200px) {
-height: 30%;
+    height: 30%;
   }
   @media (max-width: 650px) {
     flex-direction: row;
     width: 25%;
+    height: 100%;
   }
 `;
 
@@ -149,7 +184,7 @@ export const Nav = styled(NavLink)`
     justify-content: center;
     padding-left: 0;
   }
-  
+
   &:hover {
     ${Icon} {
       fill: #7d6dc5;

@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   overflow-x:hidden;
 `;
 
-const StyledFlex = styled.div`
+ export const StyledFlex = styled.div`
   display: flex;
   flex-direction: ${(props) => props.direction || "row"};
   justify-content: ${(props) => props.justify || "stretch"};

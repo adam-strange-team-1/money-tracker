@@ -1,10 +1,11 @@
 import React from "react";
-import { Flex, SVG, WidgetWrapper, Text } from "./WidgetsStyle";
+import { SVG, WidgetWrapper, Text } from "./WidgetsStyle";
+import { Flex } from "../common/StyledComponents";
 
 export default function SmallSpending() {
   return (
     <WidgetWrapper background="white">
-      <Flex margin="0 0 0 -25%" justify="start" align="center">
+      <Flex margin="0 0 0 -25%" justify="start" align="center" height="auto" width="auto">
         <SVG
           className="icon-spending"
           width="56"

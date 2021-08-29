@@ -1,13 +1,20 @@
 import React from "react";
-import { Flex, TitleStyled, Img, Text, InfoBlocks } from "./DashboardStyled";
+import {
+  InfoBlocks,
+  DashboardWrapper,
+  InfoBlockWrapper,
+} from "./DashboardStyled";
+import { Flex, TitleStyled, Img, Text } from "../common/StyledComponents";
 
 export default function Dashboard() {
   return (
-    <Flex direction="column" margin="65px 0 0 20vw" width="55vw" align="start" height="100%">
-      <Text fontSize="14px" lineHeight="24px" color="#707EAE">Hi Charles,</Text>
+    <DashboardWrapper>
+      <Text fontSize="14px" lineHeight="24px" color="#707EAE">
+        Hi Charles,
+      </Text>
       <TitleStyled>Welcome to MONEY tracker!</TitleStyled>
-      <Flex margin="30px 0 0 0" direction="row" justify="space-between">
-        <InfoBlocks padding="30px 10px 0" width = "43%">
+      <InfoBlockWrapper>
+        <InfoBlocks padding="30px 10px 0" width="43%">
           <Flex direction="column" justify="center" align="center">
             <Img
               src="https://images.pexels.com/photos/1936801/pexels-photo-1936801.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -67,7 +74,7 @@ export default function Dashboard() {
             </Flex>
           </Flex>
         </InfoBlocks>
-        <InfoBlocks padding="30px 0 0 20px" width = "43%">
+        <InfoBlocks padding="30px 0 0 20px" width="43%">
           <Flex direction="column" align="start">
             <Text fontSize="20px" lineHeight="32px">
               Your transactions
@@ -153,10 +160,12 @@ export default function Dashboard() {
             <Text color="#7D6DC5">View all</Text>
           </Flex>
         </InfoBlocks>
-      </Flex>
-      <InfoBlocks margin="0 0 95px 0" width= "100%" height="400px">
-        <Flex justify="center" align="center">графік</Flex>
+      </InfoBlockWrapper>
+      <InfoBlocks margin="0 0 95px 0" width="100%" height="400px">
+        <Flex justify="center" align="center">
+          графік
+        </Flex>
       </InfoBlocks>
-    </Flex>
+    </DashboardWrapper>
   );
 }

@@ -1,10 +1,11 @@
 import React from "react";
-import { Flex, SVG, Text, WidgetWrapper } from "./WidgetsStyle";
+import { SVG, Text, WidgetWrapper } from "./WidgetsStyle";
+import { Flex } from "../common/StyledComponents";
 
 export default function SmallChart() {
   return (
     <WidgetWrapper background="white">
-      <Flex margin="20px" width="100%"  justify="space-between" align="center">
+      <Flex margin="20px" width="100%"  justify="space-between" align="center" height="auto" width="auto">
         <Flex direction="column">
           <Text color="#A3AED0" weight="normal">Spent this month</Text>
           <Text color="#323765" size="24px">$682.50</Text>

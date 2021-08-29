@@ -1,5 +1,5 @@
 import React from "react";
-import { SettingsForms, Input, Button } from "./SettingsStyleComp";
+import { SettingsForms, Input, Button, SettingWrapper } from "./SettingsStyleComp";
 import { Flex, Text, TitleStyled, Img } from "../common/StyledComponents";
 
 export default function Settings() {
@@ -35,7 +35,7 @@ export default function Settings() {
   };
 
   return (
-    <Flex direction="column" margin="60px 0 0 20vw" width="55vw" align="start">
+    <SettingWrapper>
       <TitleStyled>Settings</TitleStyled>
       <SettingsForms>
         <Flex direction="column">
@@ -79,6 +79,6 @@ export default function Settings() {
           </Flex>
         </Flex>
       </SettingsForms>
-    </Flex>
+    </SettingWrapper>
   );
 }

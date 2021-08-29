@@ -1,19 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import { Flex } from "../common/StyledComponents";
 
-const StyledFlex = styled.div`
-  display: flex;
-  flex-direction: ${(props) => props.direction || "row"};
-  justify-content: ${(props) => props.justify || "stretch"};
-  align-items: ${(props) => props.align || "stretch"};
-  margin: ${({ margin }) => margin || "0"};
-  width: ${(props) => props.width || "auto"};
-  height: ${(props) => props.height || "auto"};
+export const WidgetsWrapper = styled(Flex)`
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 85%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 70px 15px 30px 0;
+  width: auto;
 `;
-
-export const Flex = (props) => {
-  return <StyledFlex {...props} />;
-};
 
 const WidgetWrapperStyled = styled.div`
   font-family: "Work Sans", sans-serif;
@@ -24,9 +24,16 @@ const WidgetWrapperStyled = styled.div`
   min-width: "295px";
   width: ${(props) => props.width || "22vw"};
   height: ${(props) => props.height || "14vh"};
+  max-height: 125px;
   background: ${(props) => props.background || "#8083B9"};
   padding: ${(props) => props.padding || "0"};
   border-radius: 20px;
+  @media (max-width: 1200px) {
+    width: 28vw;
+  }
+  @media (max-width: 860px) {
+    display: none;
+  }
 `;
 
 export const WidgetWrapper = (props) => {
