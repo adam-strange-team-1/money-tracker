@@ -1,20 +1,40 @@
 import styled from "styled-components";
+import { StyledFlex } from "../components/common/StyledComponents";
 
-const StyledFlex = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;500&display=swap");
-  display: flex;
-  flex-direction: ${(props) => props.direction || "row"};
-  justify-content: ${(props) => props.justify || "stretch"};
-  align-items: ${(props) => props.align || "stretch"};
-  margin: ${({ margin }) => margin || "0"};
-  width: ${(props) => props.width || "100%"};
-  height: ${(props) => props.height || "100%"};
-  transition: ${(props) => props.height || "100%"};
+export const ActivityWrapper = styled(StyledFlex)`
+  flex-direction: column;
+  margin: 65px 0 0 20vw;
+  width: 55vw;
+  align-items: start;
+  height: max-content;
+  @media (max-width: 1200px) {
+    margin-left: 15vw;
+  }
+  @media (max-width: 860px) {
+    width: 100%;
+    margin-right: 30px;
+  }
+  @media (max-width: 650px) {
+    margin-left: 30px;
+    margin-top: 85px;
+  }
 `;
 
-export const Flex = (props) => {
-  return <StyledFlex {...props} />;
-};
+export const InfoBlockWrapper = styled(StyledFlex)`
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  @media (max-width: 650px) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    height: 100%;
+  }
+`;
+
 export const TitleStyled = styled.h1`
   font-family: "Work Sans", sans-serif;
   font-style: normal;

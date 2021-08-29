@@ -1,6 +1,6 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import { Flex, Text } from "./ActivityStyled";
+import { Flex, Text } from "../components/common/StyledComponents";
 
 const data = {
   labels: ["Paycheck", "Bonus", "Others"],

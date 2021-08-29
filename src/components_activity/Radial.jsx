@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Flex, Text } from "./ActivityStyled";
+import { Flex, Text } from "../components/common/StyledComponents";
 import { Pie } from "react-chartjs-2";
 
 const PieChart = () => {
