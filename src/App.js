@@ -1,11 +1,11 @@
-// import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 import logo from "./img/logo-icon.svg";
 import {
-  Wrapper,
   SideBar,
   Logo,
+  LogoPhone,
   LogoText,
+  LogoTextPhone,
   LogoTextTop,
   LogoTextBottom,
   LogoLineBottom,
@@ -15,12 +15,14 @@ import {
   Nav,
   NavText,
   Icon,
-} from "./components/styledComponents";
-import Settings from "./components/SettingsComponent";
+} from "./components/SidebarStylesComponents";
+import { Wrapper } from "./components/common/StyledComponents";
+import Settings from "./components/settings_components/SettingsComponent";
 import Widget from "./components/Widgets/Widget";
+import Dashboard from "./components/dachboard_components/Dashboard";
 
 function DashboardComponent() {
-  return <div></div>;
+  return <Dashboard />;
 }
 
 function ActivityComponent() {
@@ -36,8 +38,16 @@ function SettingsComponent() {
 }
 
 export default function App() {
+  const match = useRouteMatch();
   return (
     <Wrapper>
+      <LogoPhone>
+        <img src={logo} alt="" />
+        <LogoTextPhone>
+          <LogoTextTop>MONEY</LogoTextTop>
+          <LogoTextBottom>tracker</LogoTextBottom>
+        </LogoTextPhone>
+      </LogoPhone>
       <SideBar>
         <Logo>
           <img src={logo} alt="" />
@@ -49,7 +59,7 @@ export default function App() {
         <LogoLineBottom />
         <SideBarInner>
           <SideBarInnerTop>
-            <Nav exact to="/" style={{ textDecoration: "none" }}>
+            <Nav exact to={`${match.url}/`} style={{ textDecoration: "none" }}>
               <svg
                 width="24"
                 height="24"
@@ -61,7 +71,10 @@ export default function App() {
               </svg>
               <NavText>Dashboard</NavText>
             </Nav>
-            <Nav to="/activity" style={{ textDecoration: "none" }}>
+            <Nav
+              to={`${match.url}/activity`}
+              style={{ textDecoration: "none" }}
+            >
               <svg
                 width="24"
                 height="24"
@@ -73,7 +86,7 @@ export default function App() {
               </svg>
               <NavText>Activity</NavText>
             </Nav>
-            <Nav to="/library" style={{ textDecoration: "none" }}>
+            <Nav to={`${match.url}/library`} style={{ textDecoration: "none" }}>
               <svg
                 width="24"
                 height="24"
@@ -87,7 +100,10 @@ export default function App() {
             </Nav>
           </SideBarInnerTop>
           <SideBarBottom>
-            <Nav to="/settings" style={{ textDecoration: "none" }}>
+            <Nav
+              to={`${match.url}/settings`}
+              style={{ textDecoration: "none" }}
+            >
               <svg
                 width="24"
                 height="24"
@@ -104,10 +120,23 @@ export default function App() {
       </SideBar>
 
       <Switch>
-        <Route exact path="/" component={DashboardComponent}></Route>
-        <Route path="/activity" component={ActivityComponent}></Route>
-        <Route path="/library" component={LibraryComponent}></Route>
-        <Route path="/settings" component={SettingsComponent}></Route>
+        <Route
+          exact
+          path={`${match.path}/`}
+          component={DashboardComponent}
+        ></Route>
+        <Route
+          path={`${match.path}/activity`}
+          component={ActivityComponent}
+        ></Route>
+        <Route
+          path={`${match.path}/library`}
+          component={LibraryComponent}
+        ></Route>
+        <Route
+          path={`${match.path}/settings`}
+          component={SettingsComponent}
+        ></Route>
       </Switch>
       <Widget />
     </Wrapper>

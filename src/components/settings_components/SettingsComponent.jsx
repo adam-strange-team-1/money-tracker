@@ -1,19 +1,6 @@
 import React from "react";
-import {
-  Header,
-  SettingsForms,
-  Form,
-  ProfileFormHeder,
-  ProfileText,
-  FormTextHeader,
-  FormText,
-  ProfileFoto,
-  Img,
-  InputsBlock,
-  Input,
-  Button,
-} from "./SettingsStyleComp";
-import { Flex } from "./Widgets/WidgetsStyle";
+import { SettingsForms, Input, Button, SettingWrapper } from "./SettingsStyleComp";
+import { Flex, Text, TitleStyled, Img } from "../common/StyledComponents";
 
 export default function Settings() {
   const [inputName, setInputName] = React.useState("");
@@ -48,22 +35,20 @@ export default function Settings() {
   };
 
   return (
-    <Flex direction="column" margin="0 0 0 20vw" width="100%" align="center">
-      <Header>Settings</Header>
+    <SettingWrapper>
+      <TitleStyled>Settings</TitleStyled>
       <SettingsForms>
-        <Form>
-          <ProfileFormHeder>
-            <ProfileText>
-              <FormTextHeader>Profile</FormTextHeader>
-              <FormText>
-                Name, Surname, Email address, URL Address foto
-              </FormText>
-            </ProfileText>
-            <ProfileFoto>
-              <Img src={inputFoto} alt="user foto" />
-            </ProfileFoto>
-          </ProfileFormHeder>
-          <InputsBlock>
+        <Flex direction="column">
+          <Flex justify="space-around" align="center" width="100%">
+            <Flex direction="column">
+              <Text font-size="30px">Profile</Text>
+              <Text weight="300" font-size="18px" color="rgba(0, 0, 34, 0.5)">
+                Name, Surname, Email address, URL Address photo
+              </Text>
+            </Flex>
+            <Img src={inputFoto} width="50px" height="50px" alt="user photo" />
+          </Flex>
+          <Flex direction="column" width="auto">
             <Input
               type="text"
               placeholder="Name*"
@@ -84,16 +69,16 @@ export default function Settings() {
             ></Input>
             <Input
               type="url"
-              placeholder="URL Address foto *"
+              placeholder="URL Address photo *"
               value={inputFoto}
               onChange={getFoto}
             />
-          </InputsBlock>
-          <Button onClick={saveDataUser}>Save</Button>
-        </Form>
-
-        <Form></Form>
+          </Flex>
+          <Flex justify="flex-end">
+            <Button onClick={saveDataUser}>Save</Button>
+          </Flex>
+        </Flex>
       </SettingsForms>
-    </Flex>
+    </SettingWrapper>
   );
 }

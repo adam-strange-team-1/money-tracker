@@ -1,10 +1,11 @@
 import React from "react";
-import { Flex, SVG, Text, WidgetWrapper } from "./WidgetsStyle";
+import { SVG, Text, WidgetWrapper } from "./WidgetsStyle";
+import { Flex } from "../common/StyledComponents";
 
 export default function SmallActivity() {
   return (
     <WidgetWrapper>
-      <Flex margin="10px" justify="center" align="center">
+      <Flex margin="10px" justify="center" align="center" height="auto" width="auto">
         <Flex width="50%" direction="column">
           <Text weight="normal">Activity</Text>
           <Text size="24px">$540.50</Text>
