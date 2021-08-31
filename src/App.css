@@ -74,19 +74,12 @@ body {
   font-size: 12px;
   line-height: 100%;
 }
-a {
+.side_bar_inner_top a {
   text-decoration: none;
-<<<<<<< HEAD
 }*/
 /* a {
   display: flex;
   align-items: center;
-=======
-}
-.frame {
-  display: table-cell;
-  vertical-align: middle;
->>>>>>> 808826d (add side bar)
   width: 214px;
   height: 45px;
   border-radius: 4px;
