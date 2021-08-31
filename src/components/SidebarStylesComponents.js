@@ -188,10 +188,10 @@ export const Nav = styled(NavLink)`
   &:hover {
     ${Icon} {
       fill: #7d6dc5;
-      transition: all 0.5s ease;
+      transition: all 0.3s ease;
     }
     color: #7d6dc5;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
   &.active {
     background-color: #7d6dc5;
@@ -204,7 +204,7 @@ export const Nav = styled(NavLink)`
 
 export const NavText = styled.span`
   font-family: "Work Sans", sans-serif;
-  font-weight: bold;
+
   margin-left: 8px;
   @media (max-width: 1200px) {
     display: none;

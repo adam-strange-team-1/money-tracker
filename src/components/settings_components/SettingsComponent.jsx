@@ -25,13 +25,10 @@ export default function Settings() {
   };
 
   const saveDataUser = () => {
-    let dataUser = {
-      name: inputName,
-      surname: inputSurname,
-      email: inputEmail,
-      foto: inputFoto,
-    };
-    console.log(dataUser);
+    localStorage.setItem("name", inputName);
+    localStorage.setItem("surname", inputSurname);
+    localStorage.setItem("email", inputEmail);
+    localStorage.setItem("foto", inputFoto);
   };
 
   return (
@@ -74,7 +71,7 @@ export default function Settings() {
               onChange={getFoto}
             />
           </Flex>
-          <Flex justify="flex-end">
+          <Flex justify="flex-end" style={{margin: "7px 0"}}>
             <Button onClick={saveDataUser}>Save</Button>
           </Flex>
         </Flex>
