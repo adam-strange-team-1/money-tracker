@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Datepicker from './table-components/Datepicker'
 
+
+
 class Form extends Component {
   render() {
     return (
@@ -8,18 +10,19 @@ class Form extends Component {
         <h3>Add a new item:</h3>  
         <form onSubmit={this.props.handleFormSubmit}>
 
-          <select name='category' value={this.props.category} onChange={this.props.handleInputChange}>
+          <select className='form-select' name='category' value={this.props.category} onChange={this.props.handleInputChange}>
             <option defaultValue >Choose category</option>
             <option value='Home'>Home</option>
             <option value='Food'>Food</option>
             <option value='Transport'>Transport</option>
           </select>
 
-          <Datepicker name='date' value={this.props.date} onChange={this.props.handleInputChange}/>
+          <Datepicker className="datepicker" name='date' value={this.props.date} onChange={this.props.handleInputChange}/>
 
 
           <div>
             <input
+              className="form-control"
               id="description"
               value={this.props.newDescription}
               type="text"
@@ -32,6 +35,7 @@ class Form extends Component {
          
           <div>
             <input
+              className="form-control"
               id="amount"
               value={this.props.newAmount}
               type="number"
