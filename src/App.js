@@ -21,6 +21,7 @@ import Settings from "./components/settings_components/SettingsComponent";
 import Widget from "./components/Widgets/Widget";
 import Dashboard from "./components/dachboard_components/Dashboard";
 
+
 function DashboardComponent() {
   return <Dashboard />;
 }
