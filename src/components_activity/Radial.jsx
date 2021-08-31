@@ -20,6 +20,7 @@ const PieChart = () => {
     "Dec",
   ];
   const day = n.getDate();
+//   Базовий масив даних
   const expens = [
     {
       date: {
@@ -112,7 +113,7 @@ const PieChart = () => {
     //     description: ""
     // }
   ];
-
+// Основа для виводу
   const output = [
     {
       category: "Home",

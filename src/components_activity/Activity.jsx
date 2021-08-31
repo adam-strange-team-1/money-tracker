@@ -3,6 +3,7 @@ import { ActivityWrapper, InfoBlocks, InfoBlockWrapper } from "./ActivityStyled"
 import BarChart from "./BarChart";
 import PieChart from "./Radial";
 import { Flex, Text, TitleStyled } from "../components/common/StyledComponents";
+import DoubleChart from "./Double_chart";
 
 export default function Activity() {
   return (
@@ -15,6 +16,11 @@ export default function Activity() {
         </InfoBlocks>
         <InfoBlocks width="30%" max-height="300px" padding="10px 10px 20px">
           <BarChart />
+        </InfoBlocks>
+      </InfoBlockWrapper>
+      <InfoBlockWrapper>
+      <InfoBlocks width="100%" max-height="300px" padding="10px 10px 20px">
+          <DoubleChart />
         </InfoBlocks>
       </InfoBlockWrapper>
     </ActivityWrapper>
