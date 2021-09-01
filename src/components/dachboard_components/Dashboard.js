@@ -5,6 +5,7 @@ import {
   InfoBlockWrapper,
 } from "./DashboardStyled";
 import { Flex, TitleStyled, Img, Text } from "../common/StyledComponents";
+import DoubleChart from "../../components_activity/Double_chart";
 
 export default function Dashboard() {
   return (
@@ -161,11 +162,6 @@ export default function Dashboard() {
           </Flex>
         </InfoBlocks>
       </InfoBlockWrapper>
-      <InfoBlocks margin="0 0 95px 0" width="100%" height="400px">
-        <Flex justify="center" align="center">
-          графік
-        </Flex>
-      </InfoBlocks>
     </DashboardWrapper>
   );
 }

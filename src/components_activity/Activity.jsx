@@ -1,5 +1,9 @@
 import React from "react";
-import { ActivityWrapper, InfoBlocks, InfoBlockWrapper } from "./ActivityStyled";
+import {
+  ActivityWrapper,
+  InfoBlocks,
+  InfoBlockWrapper,
+} from "./ActivityStyled";
 import BarChart from "./BarChart";
 import PieChart from "./Radial";
 import { Flex, Text, TitleStyled } from "../components/common/StyledComponents";
@@ -7,8 +11,7 @@ import DoubleChart from "./Double_chart";
 
 export default function Activity() {
   return (
-    <ActivityWrapper
-    >
+    <ActivityWrapper>
       <TitleStyled>Activity</TitleStyled>
       <InfoBlockWrapper>
         <InfoBlocks width="60%" max-height="300px" padding="10px 10px 20px">
@@ -19,7 +22,12 @@ export default function Activity() {
         </InfoBlocks>
       </InfoBlockWrapper>
       <InfoBlockWrapper>
-      <InfoBlocks width="100%" height="500px" padding="10px 10px 20px" margin = "30px 0">
+        <InfoBlocks
+          width="100%"
+          height="500px"
+          padding="10px 10px 70px"
+          margin="30px 0"
+        >
           <DoubleChart />
         </InfoBlocks>
       </InfoBlockWrapper>

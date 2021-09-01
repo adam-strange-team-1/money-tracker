@@ -9,11 +9,11 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: #f4f7fe;
-  overflow-y:scroll;
-  overflow-x:hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
 `;
 
- export const StyledFlex = styled.div`
+export const StyledFlex = styled.div`
   display: flex;
   flex-direction: ${(props) => props.direction || "row"};
   justify-content: ${(props) => props.justify || "stretch"};
@@ -22,7 +22,8 @@ export const Wrapper = styled.div`
   width: ${(props) => props.width || "100%"};
   height: ${(props) => props.height || "100%"};
   background: ${(props) => props.background || "100%"};
-  border-radius: ${(props) => props.radius || "100%"};
+  border-radius: ${(props) => props.radius};
+  box-shadow: ${(props) => props.shadow};
   transition: ${(props) => props.height || "100%"};
 `;
 
