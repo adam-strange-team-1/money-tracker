@@ -20,6 +20,7 @@ import { Wrapper } from "./components/common/StyledComponents";
 import Settings from "./components/settings_components/SettingsComponent";
 import Widget from "./components/Widgets/Widget";
 import Dashboard from "./components/dachboard_components/Dashboard";
+import LibraryComponent from "./components/library-components/LibraryComponent";
 
 
 function DashboardComponent() {
@@ -30,8 +31,8 @@ function ActivityComponent() {
   return <div></div>;
 }
 
-function LibraryComponent() {
-  return <div></div>;
+function Library() {
+  return <LibraryComponent/>;
 }
 
 function SettingsComponent() {
@@ -132,7 +133,7 @@ export default function App() {
         ></Route>
         <Route
           path={`${match.path}/library`}
-          component={LibraryComponent}
+          component={Library}
         ></Route>
         <Route
           path={`${match.path}/settings`}

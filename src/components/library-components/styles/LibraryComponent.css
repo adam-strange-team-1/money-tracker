@@ -6,7 +6,10 @@
   /* background-color: #F6F8FD; */
 }
 .table-wrapper{
-  width: 80%;
+  width: 100%;
+  border-radius: 20px;
+  /* background-color: black; */
+
 }
 .table-nav{
   width: 100%;

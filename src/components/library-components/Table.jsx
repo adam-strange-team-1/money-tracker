@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { TableStyled, Td, Tr } from './LibraryStyled';
 
 class Table extends Component {
   render() {
@@ -6,28 +7,28 @@ class Table extends Component {
     // const props = this.props
     return (
       <div id="Table">
-        <table className="table table-striped">
+        <TableStyled className="table table-striped">
           <thead>
-            <tr>
+            <Tr>
               <th>Category</th>
               <th>Date</th>
               <th>Description</th>
               <th>Amount</th>
-            </tr>
+            </Tr>
           </thead>
           <tbody>
             {items.map(item => {
               return (
-                <tr>
-                  <td>{item.category}</td>
-                  <td>{item.date}</td>
-                  <td>{item.description}</td>
-                  <td>{item.amount}</td>
-                </tr>
+                <Tr>
+                  <Td>{item.category}</Td>
+                  <Td>{item.date}</Td>
+                  <Td>{item.description}</Td>
+                  <Td>{item.amount}</Td>
+                </Tr>
               );
             })}
           </tbody>
-        </table>
+        </TableStyled>
       </div>
     );
   }

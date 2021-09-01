@@ -85,41 +85,54 @@ class LibraryComponent extends Component {
 
 export default LibraryComponent; */
 
-import React, { useState } from 'react';
-import More from './library-components/More';
+import React, { useState } from "react";
+import More from "./More";
 
-import Income from './library-components/Income'
-import Outlay from './library-components/Outlay'
+import Income from "./Income";
+import Outlay from "./Outlay";
 
-import './library-components/styles/LibraryComponent.css'
+import "./styles/LibraryComponent.css";
+import { LibraryWrapper } from "./LibraryStyled";
+import { TitleStyled, Text } from "../common/StyledComponents";
 // import DetailRowView from './library-components/table-components/DetailRowView'
 
 function LibraryComponent() {
   const [table, setTable] = useState(<Outlay />);
-  const [more, setMore] = useState()
+  const [more, setMore] = useState();
   return (
-    <div className='library-body'>
-        <h2>Library</h2>
-        <div className="table-wrapper">
-          <div className="table-nav">
+    <LibraryWrapper className="library-body">
+      <TitleStyled>Library</TitleStyled>
+      <div className="table-wrapper">
+        <div className="table-nav">
           <button
             className="table-btn active"
-            id='btn1'
-            onClick={() => setTable(<Outlay />)}>
-              Outlay
-            </button>
-          <button className="table-btn"
-            id='btn2'
-          onClick={() => setTable(<Income />)}>
-              Income
-            </button>
-          </div>
+            id="btn1"
+            onClick={() => {
+              setTable(<Outlay />);
+              document.querySelector("#btn1").classList.add("active");
+              document.querySelector("#btn2").classList.remove("active");
+            }}
+          >
+            <Text color= "inherit">Outlay</Text>
+          </button>
+          <button
+            className="table-btn"
+            id="btn2"
+            onClick={() => {
+              setTable(<Income />);
+              document.querySelector("#btn2").classList.add("active");
+              document.querySelector("#btn1").classList.remove("active");
+            }}
+          >
+            <Text color= "inherit">Income</Text>
+          </button>
+        </div>
         {table}
         {/* <button className='button-more'
         onClick={() => setMore(<More />)}>More</button> */}
       </div>
       {more}
-    </div>
-  )
+    </LibraryWrapper>
+  );
 }
 export default LibraryComponent;
