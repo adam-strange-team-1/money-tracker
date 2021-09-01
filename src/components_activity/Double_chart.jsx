@@ -210,15 +210,27 @@ const options = {
 };
 
 const DoubleChart = () => (
-  <Flex height="80%" direction="column" align="start">
-    {/* <Text weight="400" fontSize="14px" color="#A3AED0">
+  <Flex height="70%" width="90%" direction="column" align="center" justify="center" margin="10px">
+    <Flex margin="50px">
+    <Flex  background="white" direction="column" align="start">
+    <Text weight="400" fontSize="14px" color="#A3AED0">
       Income this month
     </Text>
     <Text lineHeight="42px" fontSize="34px" color="#1B2559">
       $682.5
-    </Text> */}
+    </Text>
+    </Flex>
+    <Flex background="white" direction="column" align="start">
+    <Text weight="400" fontSize="14px" color="#A3AED0">
+      Outcome this month
+    </Text>
+    <Text lineHeight="42px" fontSize="34px" color="#1B2559">
+      $682.5
+    </Text>
+    </Flex>
+    </Flex>
 
-    <Line data={data} options={options} />
+    <Line data={data} options={options}/>
   </Flex>
 );
 

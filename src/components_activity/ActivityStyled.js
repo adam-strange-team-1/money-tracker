@@ -29,7 +29,6 @@ export const InfoBlockWrapper = styled(StyledFlex)`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: white;
     border-radius: 20px;
     height: 100%;
   }
@@ -53,6 +52,10 @@ const InfoBlockStyled = styled.div`
   height: ${(props) => props.height || "350px"};
   padding: ${(props) => props.padding || "0"};
   margin: ${(props) => props.margin || "0"};
+  @media (max-width: 650px) {
+    width: 100%;
+    margin: 10px;
+  }
 `;
 
 export const InfoBlocks = (props) => {

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Flex, Text } from "../components/common/StyledComponents";
 import { Pie } from "react-chartjs-2";
+import DataOutcome from "./Outcome";
+import OutcomeCategory from "./OutcomeCategory";
 
 const PieChart = () => {
   const n = new Date();
@@ -20,139 +22,19 @@ const PieChart = () => {
     "Dec",
   ];
   const day = n.getDate();
-//   Базовий масив даних
-  const expens = [
-    {
-      date: {
-        day: "5",
-        month: "Jul",
-        year: "2021",
-      },
-      category: "Home",
-      amount: 500,
-      description: "Rent",
-    },
-    {
-      date: {
-        day: "5",
-        month: "Aug",
-        year: "2021",
-      },
-      category: "Home",
-      amount: 500,
-      description: "Rent",
-    },
-    {
-      date: {
-        day: "11",
-        month: "Jul",
-        year: "2021",
-      },
-      category: "Food",
-      amount: 10,
-      description: "Silpo",
-    },
-    {
-      date: {
-        day: "21",
-        month: "Jul",
-        year: "2021",
-      },
-      category: "Food",
-      amount: 20,
-      description: "Aushan",
-    },
-    {
-      date: {
-        day: "2",
-        month: "Aug",
-        year: "2021",
-      },
-      category: "Food",
-      amount: 15,
-      description: "Silpo",
-    },
-    {
-      date: {
-        day: "9",
-        month: "Aug",
-        year: "2021",
-      },
-      category: "Food",
-      amount: 5,
-      description: "Silpo",
-    },
-    {
-      date: {
-        day: "5",
-        month: "Jul",
-        year: "2021",
-      },
-      category: "Transportation",
-      amount: 0.5,
-      description: "Bus",
-    },
-    {
-      date: {
-        day: "12",
-        month: "Jul",
-        year: "2021",
-      },
-      category: "Transportation",
-      amount: 0.5,
-      description: "Bus",
-    },
-    // {
-    //     date: {
-    //         day: "",
-    //         month: "",
-    //         year: ""
-    //     },
-    //     category: "",
-    //     amount: ,
-    //     description: ""
-    // }
-  ];
-// Основа для виводу
-  const output = [
-    {
-      category: "Home",
-      color: "",
-      amount: 0,
-    },
-    {
-      category: "Transportation",
-      color: "",
-      amount: 0,
-    },
-    {
-      category: "Food",
-      color: "",
-      amount: 0,
-    },
-    {
-      category: "Helth/Medical",
-      color: "",
-      amount: 0,
-    },
-    {
-      category: "Pets",
-      color: "",
-      amount: 0,
-    },
-    {
-      category: "Entertaiment",
-      color: "",
-      amount: 0,
-    },
-  ];
+  // Основа для виводу
+  const output = OutcomeCategory.map((el) => ({
+    category: el,
+    color: "",
+    amount: 0,
+  }));
 
-  const [dataSample, setDataSample] = useState("monthly");
+  const [dataSample, setDataSample] = useState("allPeriod");
 
   function getData() {
     let data;
     if (dataSample === "monthly") {
-      const arr = expens.filter((el) => el.date.month === monthArr[month]);
+      const arr = DataOutcome.filter((el) => el.date.month === monthArr[month]);
       for (let i = 0; i < output.length; i++) {
         output[i].amount = 0;
         for (let a = 0; a < arr.length; a++) {
@@ -184,7 +66,7 @@ const PieChart = () => {
         ],
       };
     } else if (dataSample === "yearly") {
-      const arr = expens.filter((el) => el.date.year === "2021");
+      const arr = DataOutcome.filter((el) => el.date.year === "2021");
       for (let i = 0; i < output.length; i++) {
         output[i].amount = 0;
         for (let a = 0; a < arr.length; a++) {
@@ -216,8 +98,8 @@ const PieChart = () => {
         ],
       };
     } else if (dataSample === "daily") {
-      const arr = expens.filter(
-        (el) => el.date.day === day && el.date.month === monthArr[month]
+      const arr = DataOutcome.filter(
+        (el) => el.date.day == day && el.date.month === monthArr[month]
       );
       for (let i = 0; i < output.length; i++) {
         output[i].amount = 0;
@@ -249,8 +131,8 @@ const PieChart = () => {
           },
         ],
       };
-    } else { 
-      const arr = expens;
+    } else {
+      const arr = DataOutcome;
       for (let i = 0; i < output.length; i++) {
         output[i].amount = 0;
         for (let a = 0; a < arr.length; a++) {
@@ -276,12 +158,17 @@ const PieChart = () => {
                 }
               })
               .map((el) => el.amount),
-            backgroundColor: ["#1C6CB7", "#FFCE20", "#05CD99"],
+            backgroundColor: [
+              "#05CD99",
+              "#1C6CB7",
+              "#7D6DC5",
+              "#FFCE20",
+              "red",
+            ],
             hoverOffset: 4,
           },
         ],
       };
-
     }
     return data;
   }
@@ -308,11 +195,11 @@ const PieChart = () => {
           Category
         </Text>
         <select onChange={(e) => setDataSample(e.target.value)}>
-        <option selected value="allPeriod">All period </option>
-          <option value="yearly">This Year</option>
-          <option  value="monthly">
-            This Month
+          <option selected value="allPeriod">
+            All period{" "}
           </option>
+          <option value="yearly">This Year</option>
+          <option value="monthly">This Month</option>
           <option value="daily">Today </option>
         </select>
       </Flex>

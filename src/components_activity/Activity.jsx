@@ -19,7 +19,7 @@ export default function Activity() {
         </InfoBlocks>
       </InfoBlockWrapper>
       <InfoBlockWrapper>
-      <InfoBlocks width="100%" max-height="300px" padding="10px 10px 20px">
+      <InfoBlocks width="100%" height="500px" padding="10px 10px 20px" margin = "30px 0">
           <DoubleChart />
         </InfoBlocks>
       </InfoBlockWrapper>

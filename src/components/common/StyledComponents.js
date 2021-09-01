@@ -21,6 +21,8 @@ export const Wrapper = styled.div`
   margin: ${({ margin }) => margin || "0"};
   width: ${(props) => props.width || "100%"};
   height: ${(props) => props.height || "100%"};
+  background: ${(props) => props.background || "100%"};
+  border-radius: ${(props) => props.radius || "100%"};
   transition: ${(props) => props.height || "100%"};
 `;
 
