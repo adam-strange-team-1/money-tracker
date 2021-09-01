@@ -1,22 +1,72 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Flex, Text } from "../components/common/StyledComponents";
+import DataIncome from "./Income";
+import IncomeCategory from "./IncomeCategory";
+
+//дані про поточний місяць
+const n = new Date();
+const month = n.getMonth();
+const monthArr = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+// сума за цей місяць
+let allData = 0;
+DataIncome.map((el) => {
+  if (el.date.month === monthArr[month]) {
+    allData += el.amount;
+  }
+});
+
+//відфільтрований масив за цей місяць
+const monthOutput = DataIncome.filter(
+  (el) => el.date.month === monthArr[month]
+);
+
+//суми по категоріях для графіка
+let dataOutput = []; 
+for (let i = 0; i < IncomeCategory.length; i++) {
+  let x = monthOutput.filter((el) => el.category === IncomeCategory[i]);
+  dataOutput[i] = 0;
+  for (let a = 0; a < x.length; a++) {
+    dataOutput[i] += x[a].amount;
+  }
+}
+console.log(dataOutput)
+
+// масив за цей місяць макс доходу(для сірої колонки)
+let amountIncome = [];
+for (let i = 0; i < dataOutput.length; i++) {
+  amountIncome[i] = allData;
+}
 
 const data = {
-  labels: ["Paycheck", "Bonus", "Others"],
+  labels: IncomeCategory,
   datasets: [
     {
-      label: "Income",
-      data: [12, 19, 1],
+      label: "",
+      data: dataOutput,
       backgroundColor: "#4318FF",
       borderRadius: 60,
       maxBarThickness: 30,
-      minBarLength: 30,
+      minBarLength: 0,
       borderSkipped: true,
     },
     {
       label: "All income",
-      data: [34, 34, 34],
+      data: amountIncome,
       backgroundColor: "#E9EDF7",
       borderRadius: 60,
       maxBarThickness: 30,
@@ -44,7 +94,7 @@ const options = {
   },
   plugins: {
     tooltip: {
-      enabled: false
+      enabled: true,
       // {filter: function(TooltipData) {
       //   if(data.datasets[0]) {
       //     return true
@@ -64,7 +114,7 @@ const BarChart = () => (
       Income this month
     </Text>
     <Text lineHeight="42px" fontSize="34px" color="#1B2559">
-      $682.5
+      ${allData}
     </Text>
 
     <Bar data={data} options={options} />
