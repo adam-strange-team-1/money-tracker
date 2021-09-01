@@ -44,22 +44,10 @@ const PieChart = () => {
         }
       }
       data = {
-        labels: output
-          .filter((el) => {
-            if (el.amount != 0) {
-              return el.category;
-            }
-          })
-          .map((el) => el.category),
+        labels: output.filter((el) => el.amount != 0).map((el) => el.category),
         datasets: [
           {
-            data: output
-              .filter((el) => {
-                if (el.amount != 0) {
-                  return el.category;
-                }
-              })
-              .map((el) => el.amount),
+            data: output.filter((el) => el.amount != 0).map((el) => el.amount),
             backgroundColor: ["#1C6CB7", "#FFCE20", "#05CD99"],
             hoverOffset: 4,
           },
@@ -76,13 +64,7 @@ const PieChart = () => {
         }
       }
       data = {
-        labels: output
-          .filter((el) => {
-            if (el.amount != 0) {
-              return el.category;
-            }
-          })
-          .map((el) => el.category),
+        labels: output.filter((el) => el.amount != 0).map((el) => el.category),
         datasets: [
           {
             data: output
@@ -110,13 +92,7 @@ const PieChart = () => {
         }
       }
       data = {
-        labels: output
-          .filter((el) => {
-            if (el.amount != 0) {
-              return el.category;
-            }
-          })
-          .map((el) => el.category),
+        labels: output.filter((el) => el.amount != 0).map((el) => el.category),
         datasets: [
           {
             data: output
@@ -142,13 +118,7 @@ const PieChart = () => {
         }
       }
       data = {
-        labels: output
-          .filter((el) => {
-            if (el.amount != 0) {
-              return el.category;
-            }
-          })
-          .map((el) => el.category),
+        labels: output.filter((el) => el.amount != 0).map((el) => el.category),
         datasets: [
           {
             data: output
@@ -181,8 +151,8 @@ const PieChart = () => {
         position: "right",
         labels: {
           color: "#1B2559",
-          boxWidth: 0,
-          boxHeight: 0,
+          boxWidth: 10,
+          boxHeight: 10,
         },
       },
     },

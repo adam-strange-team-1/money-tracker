@@ -34,7 +34,11 @@ DataOutcome.map((el) => {
 });
 
 function getOutputLabels() {
-  const inputArr = [].concat(DataIncome).concat(DataOutcome);
+  const input = [].concat(DataIncome).concat(DataOutcome);
+  const inputArr = [];
+  for (let i = 0; i < input.length; i++) {
+    inputArr.push({ ...input[i] });
+  }
   const monthArr = {
     Jan: 1,
     Feb: 2,
