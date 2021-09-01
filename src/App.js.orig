@@ -20,9 +20,12 @@ import { Wrapper } from "./components/common/StyledComponents";
 import Settings from "./components/settings_components/SettingsComponent";
 import Widget from "./components/Widgets/Widget";
 import Dashboard from "./components/dachboard_components/Dashboard";
+<<<<<<< HEAD
 import LibraryComponent from "./components/library-components/LibraryComponent";
-import Activity from "./components_activity/Activity";
 
+=======
+import Activity from "./components_activity/Activity";
+>>>>>>> 270dc09 (Update styled)
 
 function DashboardComponent() {
   return <Dashboard />;

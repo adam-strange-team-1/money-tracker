@@ -147,17 +147,6 @@ const PieChart = () => {
     },
   ];
 
-  function getOutput(value) {
-    const arr = expens.filter((el) => el.date.month === value);
-    for (let i = 0; i < output.length; i++) {
-      output[i].amount = 0;
-      for (let a = 0; a < arr.length; a++) {
-        if (output[i].category === arr[a].category) {
-          output[i].amount += arr[a].amount;
-        }
-      }
-    }
-  }
   const [dataSample, setDataSample] = useState("monthly");
 
   function getData() {
@@ -260,6 +249,39 @@ const PieChart = () => {
           },
         ],
       };
+    } else { 
+      const arr = expens;
+      for (let i = 0; i < output.length; i++) {
+        output[i].amount = 0;
+        for (let a = 0; a < arr.length; a++) {
+          if (output[i].category === arr[a].category) {
+            output[i].amount += arr[a].amount;
+          }
+        }
+      }
+      data = {
+        labels: output
+          .filter((el) => {
+            if (el.amount != 0) {
+              return el.category;
+            }
+          })
+          .map((el) => el.category),
+        datasets: [
+          {
+            data: output
+              .filter((el) => {
+                if (el.amount != 0) {
+                  return el.category;
+                }
+              })
+              .map((el) => el.amount),
+            backgroundColor: ["#1C6CB7", "#FFCE20", "#05CD99"],
+            hoverOffset: 4,
+          },
+        ],
+      };
+
     }
     return data;
   }
@@ -286,8 +308,9 @@ const PieChart = () => {
           Category
         </Text>
         <select onChange={(e) => setDataSample(e.target.value)}>
+        <option selected value="allPeriod">All period </option>
           <option value="yearly">This Year</option>
-          <option selected value="monthly">
+          <option  value="monthly">
             This Month
           </option>
           <option value="daily">Today </option>
