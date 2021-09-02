@@ -87,7 +87,7 @@ export default function Settings() {
       <SettingsForms>
         <Flex direction="column">
           <Text font-size="30px">Category</Text>
-          <Flex margin="10px">
+          <Flex margin="0" width="100%">
             <button
               className="table-btn active"
               id="category1"
@@ -111,8 +111,8 @@ export default function Settings() {
               <Text color="inherit">Income</Text>
             </button>
           </Flex>
+          <CategoryTable arr={table} />
         </Flex>
-        <CategoryTable arr={table} />
       </SettingsForms>
     </SettingWrapper>
   );
