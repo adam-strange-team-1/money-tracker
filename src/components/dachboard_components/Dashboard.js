@@ -7,6 +7,12 @@ import {
 import { Flex, TitleStyled, Img, Text } from "../common/StyledComponents";
 
 export default function Dashboard() {
+  const details = {
+    name: localStorage.getItem("name"),
+    surname: localStorage.getItem("surname"),
+    email: localStorage.getItem("email"),
+    photo: localStorage.getItem("photo"),
+  };
   return (
     <DashboardWrapper>
       <Text fontSize="14px" lineHeight="24px" color="#707EAE">
@@ -17,11 +23,11 @@ export default function Dashboard() {
         <InfoBlocks padding="30px 10px 0" width="43%">
           <Flex direction="column" justify="center" align="center">
             <Img
-              src="https://images.pexels.com/photos/1936801/pexels-photo-1936801.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              src={details.photo}
               alt="profile=photo"
             />
             <Text color="#1B2559" fontSize="24px" lineHeight="32px">
-              Charles Robbie
+              {details.name} {details.surname}
             </Text>
             <Text
               color="#A3AED0"
