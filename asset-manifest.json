@@ -1,26 +1,23 @@
 {
   "files": {
-    "main.css": "/money-tracker/static/css/main.a9af57ce.chunk.css",
-    "main.js": "/money-tracker/static/js/main.37789aab.chunk.js",
-    "main.js.map": "/money-tracker/static/js/main.37789aab.chunk.js.map",
-    "runtime-main.js": "/money-tracker/static/js/runtime-main.d05af3f5.js",
-    "runtime-main.js.map": "/money-tracker/static/js/runtime-main.d05af3f5.js.map",
-    "static/css/2.ecdd39c8.chunk.css": "/money-tracker/static/css/2.ecdd39c8.chunk.css",
-    "static/js/2.5b82a0a4.chunk.js": "/money-tracker/static/js/2.5b82a0a4.chunk.js",
-    "static/js/2.5b82a0a4.chunk.js.map": "/money-tracker/static/js/2.5b82a0a4.chunk.js.map",
-    "static/js/3.f26d763f.chunk.js": "/money-tracker/static/js/3.f26d763f.chunk.js",
-    "static/js/3.f26d763f.chunk.js.map": "/money-tracker/static/js/3.f26d763f.chunk.js.map",
+    "main.css": "/money-tracker/static/css/main.cf5e852b.chunk.css",
+    "main.js": "/money-tracker/static/js/main.8dfecd23.chunk.js",
+    "main.js.map": "/money-tracker/static/js/main.8dfecd23.chunk.js.map",
+    "runtime-main.js": "/money-tracker/static/js/runtime-main.2febf4cf.js",
+    "runtime-main.js.map": "/money-tracker/static/js/runtime-main.2febf4cf.js.map",
+    "static/js/2.7c93a69c.chunk.js": "/money-tracker/static/js/2.7c93a69c.chunk.js",
+    "static/js/2.7c93a69c.chunk.js.map": "/money-tracker/static/js/2.7c93a69c.chunk.js.map",
+    "static/js/3.c98b0359.chunk.js": "/money-tracker/static/js/3.c98b0359.chunk.js",
+    "static/js/3.c98b0359.chunk.js.map": "/money-tracker/static/js/3.c98b0359.chunk.js.map",
     "index.html": "/money-tracker/index.html",
-    "static/css/2.ecdd39c8.chunk.css.map": "/money-tracker/static/css/2.ecdd39c8.chunk.css.map",
-    "static/css/main.a9af57ce.chunk.css.map": "/money-tracker/static/css/main.a9af57ce.chunk.css.map",
-    "static/js/2.5b82a0a4.chunk.js.LICENSE.txt": "/money-tracker/static/js/2.5b82a0a4.chunk.js.LICENSE.txt",
-    "static/media/logo-icon.37e6e90c.svg": "/money-tracker/static/media/logo-icon.37e6e90c.svg"
+    "static/css/main.cf5e852b.chunk.css.map": "/money-tracker/static/css/main.cf5e852b.chunk.css.map",
+    "static/js/2.7c93a69c.chunk.js.LICENSE.txt": "/money-tracker/static/js/2.7c93a69c.chunk.js.LICENSE.txt",
+    "static/media/logo-icon.d81332c8.svg": "/money-tracker/static/media/logo-icon.d81332c8.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d05af3f5.js",
-    "static/css/2.ecdd39c8.chunk.css",
-    "static/js/2.5b82a0a4.chunk.js",
-    "static/css/main.a9af57ce.chunk.css",
-    "static/js/main.37789aab.chunk.js"
+    "static/js/runtime-main.2febf4cf.js",
+    "static/js/2.7c93a69c.chunk.js",
+    "static/css/main.cf5e852b.chunk.css",
+    "static/js/main.8dfecd23.chunk.js"
   ]
 }
