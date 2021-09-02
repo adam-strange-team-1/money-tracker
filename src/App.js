@@ -62,7 +62,7 @@ export default function App() {
         <LogoLineBottom />
         <SideBarInner>
           <SideBarInnerTop>
-            <Nav exact to={`${match.url}/`} style={{ textDecoration: "none" }}>
+            <Nav exact to={`${match.url}`} style={{ textDecoration: "none" }}>
               <svg
                 width="24"
                 height="24"
@@ -75,7 +75,7 @@ export default function App() {
               <NavText>Dashboard</NavText>
             </Nav>
             <Nav
-              to={`${match.url}/activity`}
+              to={`${match.url}activity`}
               style={{ textDecoration: "none" }}
             >
               <svg
@@ -89,7 +89,7 @@ export default function App() {
               </svg>
               <NavText>Activity</NavText>
             </Nav>
-            <Nav to={`${match.url}/library`} style={{ textDecoration: "none" }}>
+            <Nav to={`${match.url}library`} style={{ textDecoration: "none" }}>
               <svg
                 width="24"
                 height="24"
@@ -104,7 +104,7 @@ export default function App() {
           </SideBarInnerTop>
           <SideBarBottom>
             <Nav
-              to={`${match.url}/settings`}
+              to={`${match.url}settings`}
               style={{ textDecoration: "none" }}
             >
               <svg
@@ -125,19 +125,19 @@ export default function App() {
       <Switch>
         <Route
           exact
-          path={`${match.path}/`}
+          path={`${match.path}`}
           component={DashboardComponent}
         ></Route>
         <Route
-          path={`${match.path}/activity`}
+          path={`${match.path}activity`}
           component={ActivityComponent}
         ></Route>
         <Route
-          path={`${match.path}/library`}
+          path={`${match.path}library`}
           component={Library}
         ></Route>
         <Route
-          path={`${match.path}/settings`}
+          path={`${match.path}settings`}
           component={SettingsComponent}
         ></Route>
       </Switch>
