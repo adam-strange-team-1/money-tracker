@@ -6,13 +6,18 @@ import {
   SettingWrapper,
 } from "./SettingsStyleComp";
 import { Flex, Text, TitleStyled, Img } from "../common/StyledComponents";
+import OutcomeCategory from "../common/OutcomeCategory";
+import IncomeCategory from "../common/IncomeCategory";
+import CategoryTable from "./CategoryTable";
+import { props } from "bluebird";
 
 export default function Settings() {
   const [details, setDetails] = useState({
     name: "Charles",
     surname: "Robbie",
     email: "robbie@gmail.com",
-    photo: "https://images.pexels.com/photos/1936801/pexels-photo-1936801.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    photo:
+      "https://images.pexels.com/photos/1936801/pexels-photo-1936801.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
   });
   const handler = () => {
     localStorage.setItem("name", details.name);
@@ -20,6 +25,8 @@ export default function Settings() {
     localStorage.setItem("email", details.email);
     localStorage.setItem("photo", details.photo);
   };
+
+  const [table, setTable] = useState(OutcomeCategory);
 
   return (
     <SettingWrapper>
@@ -76,6 +83,36 @@ export default function Settings() {
             <Button>Save</Button>
           </Flex>
         </Flex>
+      </SettingsForms>
+      <SettingsForms>
+        <Flex direction="column">
+          <Text font-size="30px">Category</Text>
+          <Flex margin="10px">
+            <button
+              className="table-btn active"
+              id="category1"
+              onClick={() => {
+                setTable(OutcomeCategory);
+                document.querySelector("#category1").classList.add("active");
+                document.querySelector("#category2").classList.remove("active");
+              }}
+            >
+              <Text color="inherit">Outlay</Text>
+            </button>
+            <button
+              className="table-btn"
+              id="category2"
+              onClick={() => {
+                setTable(IncomeCategory);
+                document.querySelector("#category2").classList.add("active");
+                document.querySelector("#category1").classList.remove("active");
+              }}
+            >
+              <Text color="inherit">Income</Text>
+            </button>
+          </Flex>
+        </Flex>
+        <CategoryTable arr={table} />
       </SettingsForms>
     </SettingWrapper>
   );
