@@ -6,6 +6,8 @@ import {
   SettingWrapper,
 } from "./SettingsStyleComp";
 import { Flex, Text, TitleStyled, Img } from "../common/StyledComponents";
+import OutlayCategory from './OutlayCategory';
+import IncomCategory from './IncomeCategory';
 
 export default function Settings() {
   const [details, setDetails] = useState({
@@ -20,6 +22,8 @@ export default function Settings() {
     localStorage.setItem("email", details.email);
     localStorage.setItem("photo", details.photo);
   };
+
+  const [table, setTable] = useState("");
 
   return (
     <SettingWrapper>
@@ -77,6 +81,38 @@ export default function Settings() {
           </Flex>
         </Flex>
       </SettingsForms>
+
+      <TitleStyled style={{margin: "50px 0 5px 0"}}>Category</TitleStyled>
+      <div className="table-wrapper">
+        <div className="table-nav">
+          <button
+            className="table-btn active"
+            id="btn1"
+            onClick={() => {
+              setTable(<OutlayCategory/>)
+              document.querySelector("#btn1").classList.add("active");
+              document.querySelector("#btn2").classList.remove("active");
+            }}
+          >
+            <Text color= "inherit">Outlay</Text>
+          </button>
+          <button
+            className="table-btn"
+            id="btn2"
+            onClick={() => {
+              setTable(<IncomCategory/>)
+              document.querySelector("#btn2").classList.add("active");
+              document.querySelector("#btn1").classList.remove("active");
+            }}
+          >
+            <Text color= "inherit">Income</Text>
+          </button>
+        </div>
+        {table}
+      </div>
+      <Flex justify="flex-end" style={{ margin: "7px 0" }}>
+        <Button>Save</Button>
+      </Flex>
     </SettingWrapper>
   );
 }
