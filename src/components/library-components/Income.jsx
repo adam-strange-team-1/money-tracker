@@ -137,7 +137,12 @@ class Outlay extends Component {
 import React, { Component } from 'react';
 import Table from './Table';
 import Form from './Form';
-import DataIncome from './table-components/dataIncome';
+// import DataIncome from './table-components/dataIncome';
+import DataIncome from '../../components_activity/Income';
+
+let DataIn =[];
+DataIncome.map((el) => DataIn.push({... el}))
+DataIn.map((el) => el.date = `${el.date.day} ${el.date.month}`)
 
 class Income extends Component {
   constructor() {
@@ -148,7 +153,7 @@ class Income extends Component {
       category: '',
       description: '',
       amount: '',
-      items: [...DataIncome]
+      items: [...DataIn]
     }
   };
 

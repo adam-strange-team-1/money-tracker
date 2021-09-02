@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Datepicker from './table-components/Datepicker'
+import OutcomeCategory from '../../components_activity/OutcomeCategory';
 
 
 
@@ -12,9 +13,10 @@ class Form extends Component {
 
           <select className='form-select' name='category' value={this.props.category} onChange={this.props.handleInputChange}>
             <option defaultValue >Choose category</option>
-            <option value='Home'>Home</option>
+            {OutcomeCategory.map((el)=> <option value={el}>{el}</option>)}
+            {/* <option value='Home'>Home</option>
             <option value='Food'>Food</option>
-            <option value='Transport'>Transport</option>
+            <option value='Transport'>Transport</option> */}
           </select>
 
           <Datepicker className="datepicker" name='date' value={this.props.date} onChange={this.props.handleInputChange}/>

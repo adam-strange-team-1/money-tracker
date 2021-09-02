@@ -68,7 +68,13 @@ class Outlay extends Component {
 import React, { Component } from 'react';
 import Table from './Table';
 import Form from './Form';
-import DataOutlay from './table-components/dataOutlay';
+// import DataOutlay from './table-components/dataOutlay';
+import DataOutcome from '../../components_activity/Outcome';
+
+let DataOutlay =[];
+DataOutcome.map((el) => DataOutlay.push({... el}))
+DataOutlay.map((el) => el.date = `${el.date.day} ${el.date.month}`)
+
 
 class Outlay extends Component {
   constructor() {
