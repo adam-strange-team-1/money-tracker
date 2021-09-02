@@ -1,4 +1,3 @@
-import DataIncome from "./Income";
 import DataOutcome from "./Outcome";
 const AllExpense = () => {
   let allOutcome = 0;

@@ -95,7 +95,7 @@ const DataOutcome = [
       month: "Sep",
       year: "2021",
     },
-    category: "Helth/Medical",
+    category: "Health/Medical",
     amount: 20,
     description: "Watsons",
   },

@@ -12,6 +12,7 @@ import { Nav } from "../SidebarStylesComponents";
 import ActivityAmount from "../common/ActivityWidget";
 import AllExpense from "../common/AllExpense";
 import allIncome from "../common/AllIncome";
+import Icons from "../common/CategoryIcon";
 
 export default function Dashboard() {
   const match = useRouteMatch();
@@ -145,11 +146,11 @@ export default function Dashboard() {
             <Flex direction="column" margin="10% 0 0 0 " height="60%">
               {outputArr().map((el) => (
                 <Flex align="center">
-                  <Img
-                    height="48px"
-                    width="48px"
-                    src="https://images.pexels.com/photos/6588914/pexels-photo-6588914.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                  />
+                  {Icons.map((ico) => {
+                    if (ico.title === el.category) {
+                      return ico.icon
+                    }
+                  })}
                   <Flex
                     justify="center"
                     margin="0 0 0 15px"

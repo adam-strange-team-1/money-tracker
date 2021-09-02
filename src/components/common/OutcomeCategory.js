@@ -1,2 +1,2 @@
-const OutcomeCategory = ["Home", "Transportation", "Food", "Helth/Medical", "Pets", "Entertaiment"];
+const OutcomeCategory = ["Home", "Transportation", "Food", "Health/Medical", "Pets", "Entertaiment"];
 export default OutcomeCategory;
