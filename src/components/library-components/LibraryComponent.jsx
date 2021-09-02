@@ -86,7 +86,6 @@ class LibraryComponent extends Component {
 export default LibraryComponent; */
 
 import React, { useState } from "react";
-import More from "./More";
 
 import Income from "./Income";
 import Outlay from "./Outlay";
@@ -94,11 +93,15 @@ import Outlay from "./Outlay";
 import "./styles/LibraryComponent.css";
 import { LibraryWrapper } from "./LibraryStyled";
 import { TitleStyled, Text } from "../common/StyledComponents";
-// import DetailRowView from './library-components/table-components/DetailRowView'
 
 function LibraryComponent() {
   const [table, setTable] = useState(<Outlay />);
-  const [more, setMore] = useState();
+  
+  const handleClick = () => {
+    const displayElem = document.getElementById("Form");
+    displayElem.classList.toggle('display-flex')
+  }
+  
   return (
     <LibraryWrapper className="library-body">
       <TitleStyled>Library</TitleStyled>
@@ -128,10 +131,10 @@ function LibraryComponent() {
           </button>
         </div>
         {table}
-        {/* <button className='button-more'
-        onClick={() => setMore(<More />)}>More</button> */}
+        
       </div>
-      {more}
+      <button className='button-more'
+        onClick={() => handleClick()}>More</button>
     </LibraryWrapper>
   );
 }
