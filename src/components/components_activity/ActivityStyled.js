@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledFlex } from "../components/common/StyledComponents";
+import { StyledFlex } from "../common/StyledComponents";
 
 export const ActivityWrapper = styled(StyledFlex)`
   flex-direction: column;

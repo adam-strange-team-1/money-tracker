@@ -1,8 +1,8 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import { Flex, Text } from "../components/common/StyledComponents";
-import DataIncome from "./Income";
-import IncomeCategory from "./IncomeCategory";
+import { Flex, Text } from "../common/StyledComponents";
+import DataIncome from "../common/Income";
+import IncomeCategory from "../common/IncomeCategory";
 
 //дані про поточний місяць
 const n = new Date();

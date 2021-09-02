@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Flex, Text } from "../components/common/StyledComponents";
+import { Flex, Text } from "../common/StyledComponents";
 import { Pie } from "react-chartjs-2";
-import DataOutcome from "./Outcome";
-import OutcomeCategory from "./OutcomeCategory";
+import DataOutcome from "../common/Outcome";
+import OutcomeCategory from "../common/OutcomeCategory";
 
 const PieChart = () => {
   const n = new Date();

@@ -21,7 +21,7 @@ import Settings from "./components/settings_components/SettingsComponent";
 import Widget from "./components/Widgets/Widget";
 import Dashboard from "./components/dachboard_components/Dashboard";
 import LibraryComponent from "./components/library-components/LibraryComponent";
-import Activity from "./components_activity/Activity";
+import Activity from "./components/components_activity/Activity";
 
 
 function DashboardComponent() {

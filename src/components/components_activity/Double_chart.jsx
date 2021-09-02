@@ -1,9 +1,9 @@
 import { concat } from "lodash";
 import React from "react";
 import { Line } from "react-chartjs-2";
-import { Flex, Text } from "../components/common/StyledComponents";
-import DataIncome from "./Income";
-import DataOutcome from "./Outcome";
+import { Flex, Text } from "../common/StyledComponents";
+import DataIncome from "../common/Income";
+import DataOutcome from "../common/Outcome";
 const n = new Date();
 const month = n.getMonth();
 const monthAr = [

@@ -5,7 +5,6 @@ import {
   InfoBlockWrapper,
 } from "./DashboardStyled";
 import { Flex, TitleStyled, Img, Text } from "../common/StyledComponents";
-import DoubleChart from "../../components_activity/Double_chart";
 
 export default function Dashboard() {
   return (

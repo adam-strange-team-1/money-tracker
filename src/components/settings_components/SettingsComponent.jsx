@@ -1,40 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { SettingsForms, Input, Button, SettingWrapper } from "./SettingsStyleComp";
 import { Flex, Text, TitleStyled, Img } from "../common/StyledComponents";
 
 export default function Settings() {
-  const [inputName, setInputName] = React.useState("");
-  const [inputSurname, setInputSurname] = React.useState("");
-  const [inputEmail, setInputEmail] = React.useState("");
-  const [inputFoto, setInputFoto] = React.useState("");
 
-  const getName = (e) => {
-    return setInputName(e.target.value);
-  };
-
-  const getSurname = (e) => {
-    return setInputSurname(e.target.value);
-  };
-
-  const getEmail = (e) => {
-    return setInputEmail(e.target.value);
-  };
-
-  const getFoto = (e) => {
-    return setInputFoto(e.target.value);
-  };
-
-  const saveDataUser = () => {
-    localStorage.setItem("name", inputName);
-    localStorage.setItem("surname", inputSurname);
-    localStorage.setItem("email", inputEmail);
-    localStorage.setItem("foto", inputFoto);
-  };
+  const [details, setDetails] = useState({name: "Charles",
+      surname: "Robbie",
+      email: "robbie@gmail.com",
+      photo: "",
+  });
+  const handler = () => {
+    localStorage.setItem("name", details.name );
+    localStorage.setItem("surname", details.surname );
+    localStorage.setItem("email", details.email );
+    localStorage.setItem("photo", details.photo );
+  }
 
   return (
     <SettingWrapper>
       <TitleStyled>Settings</TitleStyled>
-      <SettingsForms>
+      <SettingsForms onSubmit={handler()}>
         <Flex direction="column">
           <Flex justify="space-around" align="center" width="100%">
             <Flex direction="column">
@@ -43,36 +28,36 @@ export default function Settings() {
                 Name, Surname, Email address, URL Address photo
               </Text>
             </Flex>
-            <Img src={inputFoto} width="50px" height="50px" alt="user photo" />
+            <Img src={details.photo} width="50px" height="50px" alt="user photo" />
           </Flex>
           <Flex direction="column" width="auto">
             <Input
               type="text"
               placeholder="Name*"
-              value={inputName}
-              onChange={getName}
+              value={details.name}
+              onChange={(e) => setDetails({ ...details, name: e.target.value })}
             ></Input>
             <Input
               type="text"
               placeholder="Surname*"
-              value={inputSurname}
-              onChange={getSurname}
+              value={details.surname}
+              onChange={(e) => setDetails({ ...details, surname: e.target.value })}
             ></Input>
             <Input
               type="e-mail"
               placeholder="Email Address *"
-              value={inputEmail}
-              onChange={getEmail}
+              value={details.email}
+              onChange={(e) => setDetails({ ...details, email: e.target.value })}
             ></Input>
             <Input
               type="url"
               placeholder="URL Address photo *"
-              value={inputFoto}
-              onChange={getFoto}
+              value={details.photo}
+              onChange={(e) => setDetails({ ...details, photo: e.target.value })}
             />
           </Flex>
           <Flex justify="flex-end" style={{margin: "7px 0"}}>
-            <Button onClick={saveDataUser}>Save</Button>
+            <Button >Save</Button>
           </Flex>
         </Flex>
       </SettingsForms>

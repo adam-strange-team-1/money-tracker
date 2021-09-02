@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Datepicker from './table-components/Datepicker'
-import OutcomeCategory from '../../components_activity/OutcomeCategory';
+import OutcomeCategory from '../common/OutcomeCategory';
 
 
 

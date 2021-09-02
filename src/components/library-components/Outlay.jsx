@@ -69,7 +69,7 @@ import React, { Component } from 'react';
 import Table from './Table';
 import Form from './Form';
 // import DataOutlay from './table-components/dataOutlay';
-import DataOutcome from '../../components_activity/Outcome';
+import DataOutcome from '../common/Outcome';
 
 let DataOutlay =[];
 DataOutcome.map((el) => DataOutlay.push({... el}))

@@ -138,7 +138,7 @@ import React, { Component } from 'react';
 import Table from './Table';
 import Form from './Form';
 // import DataIncome from './table-components/dataIncome';
-import DataIncome from '../../components_activity/Income';
+import DataIncome from '../common/Income';
 
 let DataIn =[];
 DataIncome.map((el) => DataIn.push({... el}))
