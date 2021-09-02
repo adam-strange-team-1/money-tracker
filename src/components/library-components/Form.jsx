@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import Datepicker from './table-components/Datepicker'
 import OutcomeCategory from '../common/OutcomeCategory';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 class Form extends Component {
+
+  handleDateChange = date => {
+let selectedDateFromCalender = date.toUTCString();
+this.setState({
+      actualStartDate: selectedDateFromCalender,
+  });}
   render() {
     return (
       <div className='form-container' id="Form">
@@ -19,7 +26,7 @@ class Form extends Component {
             <option value='Transport'>Transport</option> */}
           </select>
 
-          <Datepicker className="datepicker" name='date' value={this.props.date} onChange={this.props.handleInputChange}/>
+          <Datepicker className="datepicker" name='date' selected={this.props.date} onChange={this.props.handleInputChange} />
 
 
           <div>
@@ -41,6 +48,7 @@ class Form extends Component {
               id="amount"
               value={this.props.newAmount}
               type="number"
+              min="0"
               name="amount"
               onChange={this.props.handleInputChange}
               placeholder='Amount'
@@ -48,7 +56,7 @@ class Form extends Component {
           </div>
           
           
-          <button type="submit" value="Submit">Add Item</button>
+          <button className="btn btn-outline-secondary purple" type="submit" value="Submit">Add Item</button>
         </form>
       </div>
     );
