@@ -81,7 +81,7 @@ export default function Dashboard() {
       </Text>
       <TitleStyled>Welcome to MONEY tracker!</TitleStyled>
       <InfoBlockWrapper>
-        <InfoBlocks padding="30px 10px 0" width="43%">
+        <InfoBlocks padding="30px 10px 0" width="45%">
           <Flex direction="column" justify="center" align="center">
             <Img src={details.photo} alt="profile=photo" />
             <Text color="#1B2559" fontSize="24px" lineHeight="32px">
@@ -138,23 +138,28 @@ export default function Dashboard() {
             </Flex>
           </Flex>
         </InfoBlocks>
-        <InfoBlocks padding="30px 0 0 20px" width="43%">
+        <InfoBlocks padding="25px 0 5px 20px" width="45%">
           <Flex direction="column" align="start">
             <Text fontSize="20px" lineHeight="32px">
               Your transactions
             </Text>
-            <Flex direction="column" margin="10% 0 0 0 " height="60%">
+            <Flex
+              direction="column"
+              align="center"
+              margin="10% 0 "
+              height="80%"
+            >
               {outputArr().map((el) => (
                 <Flex align="center">
                   {Icons.map((ico) => {
                     if (ico.title === el.category) {
-                      return ico.icon
+                      return ico.icon;
                     }
                   })}
                   <Flex
                     justify="center"
                     margin="0 0 0 15px"
-                    width="33%"
+                    width="43%"
                     direction="column"
                     align="start"
                   >
@@ -174,11 +179,11 @@ export default function Dashboard() {
                 </Flex>
               ))}
             </Flex>
-          </Flex>
-          <Flex height="30px" justify="flex-end" margin="-70px 0 0 150px">
-            <Nav to={`${match.url}library`}>
-              <Text color="#7D6DC5">View all</Text>
-            </Nav>
+            <Flex justify="row-reverse" height="100px" width="100%" margin="0">
+              <Nav to={`${match.url}library`}>
+                <Text color="#7D6DC5">View all →</Text>
+              </Nav>
+            </Flex>
           </Flex>
         </InfoBlocks>
       </InfoBlockWrapper>
