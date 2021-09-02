@@ -23,7 +23,7 @@ export default function Settings() {
     localStorage.setItem("photo", details.photo);
   };
 
-  const [table, setTable] = useState("");
+  const [table, setTable] = useState(<OutlayCategory/>);
 
   return (
     <SettingWrapper>
@@ -108,7 +108,19 @@ export default function Settings() {
             <Text color= "inherit">Income</Text>
           </button>
         </div>
-        {table}
+        <div  style={{
+            backgroundColor: "#E5E5E5",
+            fontFamily: "DM Sans",
+            fontWeight: "bold",
+            fontSize: "16px",
+            lineHeight: "28px",
+            letterSpacing: "-0.02em",
+            color: "#323765",
+            borderRadius: "0 0 20px 20px" 
+          }}>
+          {table}
+        </div>
+        
       </div>
       <Flex justify="flex-end" style={{ margin: "7px 0" }}>
         <Button>Save</Button>
