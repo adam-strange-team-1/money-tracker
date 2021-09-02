@@ -9,6 +9,9 @@ import DataIncome from "../common/Income";
 import DataOutcome from "../common/Outcome";
 import { Link, useRouteMatch } from "react-router-dom";
 import { Nav } from "../SidebarStylesComponents";
+import ActivityAmount from "../common/ActivityWidget";
+import AllExpense from "../common/AllExpense";
+import allIncome from "../common/AllIncome";
 
 export default function Dashboard() {
   const match = useRouteMatch();
@@ -102,7 +105,7 @@ export default function Dashboard() {
                   Activity
                 </Text>
                 <Text color="#1B2559" fontSize="24px" lineHeight="32px">
-                  $2,513
+                  ${ActivityAmount().toLocaleString("en-US")}
                 </Text>
               </Flex>
               <Flex direction="column" justify="center" align="center">
@@ -112,10 +115,10 @@ export default function Dashboard() {
                   lineHeight="20px"
                   weight="normal"
                 >
-                  Expens
+                  Expense
                 </Text>
                 <Text color="#1B2559" fontSize="24px" lineHeight="32px">
-                  $1,186
+                  ${AllExpense().toLocaleString("en-US")}
                 </Text>
               </Flex>
               <Flex direction="column" justify="center" align="center">
@@ -128,7 +131,7 @@ export default function Dashboard() {
                   Income
                 </Text>
                 <Text color="#1B2559" fontSize="24px" lineHeight="32px">
-                  $3,700
+                  ${allIncome().toLocaleString("eu-US")}
                 </Text>
               </Flex>
             </Flex>
@@ -164,22 +167,14 @@ export default function Dashboard() {
                       {el.date.day} {el.date.month} {el.date.year}
                     </Text>
                   </Flex>
-                  <Flex
-                    width="30%"
-
-                    justify="flex-end"
-                    align="center"
-                  ><Text>${el.amount}</Text></Flex>
-                  
+                  <Flex width="30%" justify="flex-end" align="center">
+                    <Text>${el.amount}</Text>
+                  </Flex>
                 </Flex>
               ))}
             </Flex>
           </Flex>
-          <Flex
-            height="30px"
-            justify="flex-end"
-            margin="-70px 0 0 150px"
-          >
+          <Flex height="30px" justify="flex-end" margin="-70px 0 0 150px">
             <Nav to={`${match.url}library`}>
               <Text color="#7D6DC5">View all</Text>
             </Nav>

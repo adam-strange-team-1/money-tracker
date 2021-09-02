@@ -1,6 +1,7 @@
 import React from "react";
 import { SVG, WidgetWrapper, Text } from "./WidgetsStyle";
 import { Flex } from "../common/StyledComponents";
+import AllExpense from "../common/AllExpense";
 
 export default function SmallSpending() {
   return (
@@ -31,7 +32,7 @@ export default function SmallSpending() {
             All Spendings
           </Text>
           <Text color="#323765" size="24px">
-            $574.34
+            ${AllExpense().toLocaleString("eu-US")}
           </Text>
         </Flex>
       </Flex>

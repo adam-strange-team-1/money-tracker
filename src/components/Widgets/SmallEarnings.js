@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, SVG, WidgetWrapper } from "./WidgetsStyle";
 import { Flex } from "../common/StyledComponents";
+import EarningMonth from "../common/EarningMonth";
 
 export default function SmallEarnings() {
   return (
@@ -28,10 +29,10 @@ export default function SmallEarnings() {
         </SVG>
         <Flex direction="column" margin="20px">
           <Text color="#A3AED0" weight="normal">
-            Earnings
+            Earnings this month
           </Text>
           <Text color="#323765" size="24px">
-            $350.40
+            ${EarningMonth().toLocaleString("eu-US")}
           </Text>
         </Flex>
       </Flex>

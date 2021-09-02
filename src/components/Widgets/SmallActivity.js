@@ -1,6 +1,7 @@
 import React from "react";
 import { SVG, Text, WidgetWrapper } from "./WidgetsStyle";
 import { Flex } from "../common/StyledComponents";
+import ActivityAmount from "../common/ActivityWidget";
 
 export default function SmallActivity() {
   return (
@@ -8,7 +9,7 @@ export default function SmallActivity() {
       <Flex margin="10px" justify="center" align="center" height="auto" width="auto">
         <Flex width="50%" direction="column">
           <Text weight="normal">Activity</Text>
-          <Text size="24px">$540.50</Text>
+          <Text size="24px">${ActivityAmount().toLocaleString("eu-US")}</Text>
         </Flex>
         <Flex width="30%" justify="center" align="center">
           <SVG
