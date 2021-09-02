@@ -16,7 +16,7 @@ export default function Dashboard() {
   return (
     <DashboardWrapper>
       <Text fontSize="14px" lineHeight="24px" color="#707EAE">
-        Hi Charles,
+        Hi {details.name},
       </Text>
       <TitleStyled>Welcome to MONEY tracker!</TitleStyled>
       <InfoBlockWrapper>
