@@ -6,6 +6,13 @@ import {
 } from "./DashboardStyled";
 import { Flex, TitleStyled, Img, Text } from "../common/StyledComponents";
 
+const getDataUser = {
+  name: localStorage.getItem("name"),
+  surname: localStorage.getItem("surname"),
+  email: localStorage.getItem("email"),
+  foto: localStorage.getItem("foto"),
+};
+
 export default function Dashboard() {
   return (
     <DashboardWrapper>
