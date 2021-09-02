@@ -17,14 +17,20 @@ class Income extends Component {
       category: "",
       description: "",
       amount: "",
-      items: [...DataIn],
+      items: DataIn,
     };
   }
 
   handleFormSubmit = (e) => {
     e.preventDefault();
-    let items = [...this.state.items];
+    let items = DataIn;
 
+    DataIncome.push({
+      date: this.state.date,
+      category: this.state.category,
+      description: this.state.description,
+      amount: this.state.amount,
+    });
     items.push({
       date: this.state.date,
       category: this.state.category,

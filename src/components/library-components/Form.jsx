@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Datepicker from "./table-components/Datepicker";
 import OutcomeCategory from "../common/OutcomeCategory";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,6 +11,16 @@ class Form extends Component {
     });
   };
   render() {
+    // const [detail, setDetail] = useState({
+    //   date: {
+    //     day: "",
+    //     month: "",
+    //     year: "",
+    //   },
+    //   category: "",
+    //   amount: 0,
+    //   description: "",
+    // });
     return (
       <div className="form-container" id="Form">
         <h3>Add a new item:</h3>

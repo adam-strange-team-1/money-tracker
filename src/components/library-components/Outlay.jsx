@@ -17,15 +17,21 @@ class Outlay extends Component {
       category: "",
       description: "",
       amount: "",
-      items: [...DataOutlay],
+      items: DataOutlay,
     };
   }
 
   handleFormSubmit = (e) => {
     e.preventDefault();
 
-    let items = [...this.state.items];
+    let items = DataOutlay;
 
+    DataOutcome.push({
+      date: this.state.date,
+      category: this.state.category,
+      description: this.state.description,
+      amount: this.state.amount,
+    });
     items.push({
       date: this.state.date,
       category: this.state.category,
