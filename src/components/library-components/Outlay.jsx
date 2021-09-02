@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import Table from './Table';
-import Form from './Form';
-import DataOutcome from '../common/Outcome';
+import React, { Component } from "react";
+import Table from "./Table";
+import Form from "./Form";
+import DataOutcome from "../common/Outcome";
+import OutcomeCategory from "../common/OutcomeCategory";
 
-let DataOutlay =[];
-DataOutcome.map((el) => DataOutlay.push({... el}))
-DataOutlay.map((el) => el.date = `${el.date.day} ${el.date.month}`)
-
+let DataOutlay = [];
+DataOutcome.map((el) => DataOutlay.push({ ...el }));
+DataOutlay.map((el) => (el.date = `${el.date.day} ${el.date.month}`));
 
 class Outlay extends Component {
   constructor() {
     super();
 
     this.state = {
-      date: '',
-      category: '',
-      description: '',
-      amount: '',
-      items: [...DataOutlay]
-    }
-  };
+      date: "",
+      category: "",
+      description: "",
+      amount: "",
+      items: [...DataOutlay],
+    };
+  }
 
   handleFormSubmit = (e) => {
     e.preventDefault();
@@ -30,15 +30,15 @@ class Outlay extends Component {
       date: this.state.date,
       category: this.state.category,
       description: this.state.description,
-      amount: this.state.amount
+      amount: this.state.amount,
     });
 
     this.setState({
       items,
-      description: '',
-      amount: '',
-      category: '',
-      date: ''
+      description: "",
+      amount: "",
+      category: "",
+      date: "",
     });
   };
 
@@ -48,31 +48,26 @@ class Outlay extends Component {
     let value = e.target.value;
 
     this.setState({
-      [name]: value
-    })
+      [name]: value,
+    });
   };
 
   render() {
     return (
       <div>
-        <Table items={ this.state.items }/>
-        <Form handleFormSubmit={ this.handleFormSubmit } 
+        <Table items={this.state.items} />
+        <Form
+          handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
           newCategory={this.state.category}
           newDate={this.state.date}
-          newDescription={ this.state.description }
-          newAmount={ this.state.amount } />
+          newDescription={this.state.description}
+          newAmount={this.state.amount}
+          categoryArr={OutcomeCategory}
+        />
       </div>
     );
   }
 }
 
-
-
 export default Outlay;
-
-
-
-
-
-

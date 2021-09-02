@@ -1,33 +1,41 @@
-import React, { Component } from 'react';
-import Datepicker from './table-components/Datepicker'
-import OutcomeCategory from '../common/OutcomeCategory';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import React, { Component } from "react";
+import Datepicker from "./table-components/Datepicker";
+import OutcomeCategory from "../common/OutcomeCategory";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class Form extends Component {
-
-  handleDateChange = date => {
-let selectedDateFromCalender = date.toUTCString();
-this.setState({
+  handleDateChange = (date) => {
+    let selectedDateFromCalender = date.toUTCString();
+    this.setState({
       actualStartDate: selectedDateFromCalender,
-  });}
+    });
+  };
   render() {
     return (
-      <div className='form-container' id="Form">
-        <h3>Add a new item:</h3>  
+      <div className="form-container" id="Form">
+        <h3>Add a new item:</h3>
         <form onSubmit={this.props.handleFormSubmit}>
-
-          <select className='form-select' name='category' value={this.props.category} onChange={this.props.handleInputChange}>
-            <option defaultValue >Choose category</option>
-            {OutcomeCategory.map((el)=> <option value={el}>{el}</option>)}
+          <select
+            className="form-select"
+            name="category"
+            value={this.props.category}
+            onChange={this.props.handleInputChange}
+          >
+            <option defaultValue>Choose category</option>
+            {this.props.categoryArr.map((el) => (
+              <option value={el}>{el}</option>
+            ))}
             {/* <option value='Home'>Home</option>
             <option value='Food'>Food</option>
             <option value='Transport'>Transport</option> */}
           </select>
 
-          <Datepicker className="datepicker" name='date' selected={this.props.date} onChange={this.props.handleInputChange} />
-
+          <Datepicker
+            className="datepicker"
+            name="date"
+            selected={this.props.date}
+            onChange={this.props.handleInputChange}
+          />
 
           <div>
             <input
@@ -37,11 +45,10 @@ this.setState({
               type="text"
               name="description"
               onChange={this.props.handleInputChange}
-              placeholder='Description'
+              placeholder="Description"
             />
           </div>
-          
-         
+
           <div>
             <input
               className="form-control"
@@ -51,12 +58,17 @@ this.setState({
               min="0"
               name="amount"
               onChange={this.props.handleInputChange}
-              placeholder='Amount'
+              placeholder="Amount"
             />
           </div>
-          
-          
-          <button className="btn btn-outline-secondary purple" type="submit" value="Submit">Add Item</button>
+
+          <button
+            className="btn btn-outline-secondary purple"
+            type="submit"
+            value="Submit"
+          >
+            Add Item
+          </button>
         </form>
       </div>
     );
