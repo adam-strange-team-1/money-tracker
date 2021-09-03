@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import OutcomeCategory from "../common/OutcomeCategory";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class Form extends Component {

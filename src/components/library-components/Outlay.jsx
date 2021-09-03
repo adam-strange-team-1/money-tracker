@@ -28,7 +28,11 @@ class Outlay extends Component {
     let items = DataOutlay;
 
     DataOutcome.push({
-      date: this.state.date,
+      date: {
+        day: moment(this.state.date).format("D"),
+        month: moment(this.state.date).format("MMM"),
+        year: moment(this.state.date).format("YYYY"),
+      },
       category: this.state.category,
       description: this.state.description,
       amount: Number(this.state.amount),
@@ -59,7 +63,7 @@ class Outlay extends Component {
 
   handleDate = (startDate) => {
     this.setState({
-      date: startDate
+      date: startDate,
     });
   };
 
@@ -68,7 +72,7 @@ class Outlay extends Component {
       <div>
         <Table items={this.state.items} />
         <Form
-           handleFormSubmit={this.handleFormSubmit}
+          handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
           newCategory={this.state.category}
           newDate={this.state.date}

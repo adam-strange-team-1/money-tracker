@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Bar } from "react-chartjs-2";
 import { Flex, Text } from "../common/StyledComponents";
 import DataIncome from "../common/Income";
@@ -36,7 +36,7 @@ const monthOutput = DataIncome.filter(
 );
 
 //суми по категоріях для графіка
-let dataOutput = []; 
+let dataOutput = [];
 for (let i = 0; i < IncomeCategory.length; i++) {
   let x = monthOutput.filter((el) => el.category === IncomeCategory[i]);
   dataOutput[i] = 0;
@@ -44,7 +44,7 @@ for (let i = 0; i < IncomeCategory.length; i++) {
     dataOutput[i] += x[a].amount;
   }
 }
-console.log(dataOutput)
+console.log(dataOutput);
 
 // масив за цей місяць макс доходу(для сірої колонки)
 let amountIncome = [];
@@ -108,7 +108,8 @@ const options = {
   },
 };
 
-const BarChart = () => (
+const BarChart = () => {
+  return(
   <Flex height="80%" direction="column" align="start">
     <Text weight="400" fontSize="14px" color="#A3AED0">
       Income this month
@@ -119,6 +120,6 @@ const BarChart = () => (
 
     <Bar data={data} options={options} />
   </Flex>
-);
+)};
 
 export default BarChart;
