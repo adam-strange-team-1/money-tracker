@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import Datepicker from "./table-components/Datepicker";
 import OutcomeCategory from "../common/OutcomeCategory";
 import "bootstrap/dist/css/bootstrap.min.css";
