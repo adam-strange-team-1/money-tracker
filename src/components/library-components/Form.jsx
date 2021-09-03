@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import OutcomeCategory from "../common/OutcomeCategory";
-import "bootstrap/dist/css/bootstrap.min.css";
-import DatePicker from "react-datepicker";
-
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 class Form extends Component {
   render() {
     return (
@@ -22,7 +22,6 @@ class Form extends Component {
           </select>
 
           <DatePicker
-            className="datepicker"
             name="date"
             placeholderText="Choose date"
             dateFormat="d MMM yyyy"
