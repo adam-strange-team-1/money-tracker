@@ -30,13 +30,13 @@ class Outlay extends Component {
       date: this.state.date,
       category: this.state.category,
       description: this.state.description,
-      amount: this.state.amount,
+      amount: Number(this.state.amount),
     });
     items.push({
       date: this.state.date,
       category: this.state.category,
       description: this.state.description,
-      amount: this.state.amount,
+      amount: Number(this.state.amount),
     });
 
     this.setState({
