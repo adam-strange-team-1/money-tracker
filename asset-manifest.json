@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/money-tracker/static/css/main.09607885.chunk.css",
-    "main.js": "/money-tracker/static/js/main.09c9e63f.chunk.js",
-    "main.js.map": "/money-tracker/static/js/main.09c9e63f.chunk.js.map",
-    "runtime-main.js": "/money-tracker/static/js/runtime-main.937bf4cf.js",
-    "runtime-main.js.map": "/money-tracker/static/js/runtime-main.937bf4cf.js.map",
+    "main.js": "/money-tracker/static/js/main.08013b73.chunk.js",
+    "main.js.map": "/money-tracker/static/js/main.08013b73.chunk.js.map",
+    "runtime-main.js": "/money-tracker/static/js/runtime-main.7e2539a5.js",
+    "runtime-main.js.map": "/money-tracker/static/js/runtime-main.7e2539a5.js.map",
     "static/css/2.bbebbe18.chunk.css": "/money-tracker/static/css/2.bbebbe18.chunk.css",
-    "static/js/2.9dffd540.chunk.js": "/money-tracker/static/js/2.9dffd540.chunk.js",
-    "static/js/2.9dffd540.chunk.js.map": "/money-tracker/static/js/2.9dffd540.chunk.js.map",
-    "static/js/3.6e614d69.chunk.js": "/money-tracker/static/js/3.6e614d69.chunk.js",
-    "static/js/3.6e614d69.chunk.js.map": "/money-tracker/static/js/3.6e614d69.chunk.js.map",
+    "static/js/2.f220a22f.chunk.js": "/money-tracker/static/js/2.f220a22f.chunk.js",
+    "static/js/2.f220a22f.chunk.js.map": "/money-tracker/static/js/2.f220a22f.chunk.js.map",
+    "static/js/3.e3e38dba.chunk.js": "/money-tracker/static/js/3.e3e38dba.chunk.js",
+    "static/js/3.e3e38dba.chunk.js.map": "/money-tracker/static/js/3.e3e38dba.chunk.js.map",
     "index.html": "/money-tracker/index.html",
     "static/css/2.bbebbe18.chunk.css.map": "/money-tracker/static/css/2.bbebbe18.chunk.css.map",
     "static/css/main.09607885.chunk.css.map": "/money-tracker/static/css/main.09607885.chunk.css.map",
-    "static/js/2.9dffd540.chunk.js.LICENSE.txt": "/money-tracker/static/js/2.9dffd540.chunk.js.LICENSE.txt",
+    "static/js/2.f220a22f.chunk.js.LICENSE.txt": "/money-tracker/static/js/2.f220a22f.chunk.js.LICENSE.txt",
     "static/media/logo-icon.37e6e90c.svg": "/money-tracker/static/media/logo-icon.37e6e90c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.937bf4cf.js",
+    "static/js/runtime-main.7e2539a5.js",
     "static/css/2.bbebbe18.chunk.css",
-    "static/js/2.9dffd540.chunk.js",
+    "static/js/2.f220a22f.chunk.js",
     "static/css/main.09607885.chunk.css",
-    "static/js/main.09c9e63f.chunk.js"
+    "static/js/main.08013b73.chunk.js"
   ]
 }
