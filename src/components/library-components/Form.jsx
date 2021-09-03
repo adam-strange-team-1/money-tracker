@@ -1,15 +1,9 @@
 import React, { Component } from "react";
-import Datepicker from "./table-components/Datepicker";
 import OutcomeCategory from "../common/OutcomeCategory";
 import "bootstrap/dist/css/bootstrap.min.css";
+import DatePicker from "react-datepicker";
 
 class Form extends Component {
-  handleDateChange = (date) => {
-    let selectedDateFromCalender = date.toUTCString();
-    this.setState({
-      actualStartDate: selectedDateFromCalender,
-    });
-  };
   render() {
     return (
       <div className="form-container" id="Form">
@@ -25,16 +19,15 @@ class Form extends Component {
             {this.props.categoryArr.map((el) => (
               <option value={el}>{el}</option>
             ))}
-            {/* <option value='Home'>Home</option>
-            <option value='Food'>Food</option>
-            <option value='Transport'>Transport</option> */}
           </select>
 
-          <Datepicker
+          <DatePicker
             className="datepicker"
             name="date"
-            selected={this.props.date}
-            onChange={this.props.handleInputChange}
+            placeholderText="Choose date"
+            dateFormat="d MMM yyyy"
+            selected={this.props.newDate}
+            onChange={this.props.handleDate}
           />
 
           <div>

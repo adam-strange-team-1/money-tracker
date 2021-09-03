@@ -3,6 +3,7 @@ import Table from "./Table";
 import Form from "./Form";
 import DataIncome from "../common/Income";
 import IncomeCategory from "../common/IncomeCategory";
+import moment from "moment";
 
 let DataIn = [];
 DataIncome.map((el) => DataIn.push({ ...el }));
@@ -13,7 +14,7 @@ class Income extends Component {
     super();
 
     this.state = {
-      date: "",
+      date: '',
       category: "",
       description: "",
       amount: "",
@@ -23,10 +24,11 @@ class Income extends Component {
 
   handleFormSubmit = (e) => {
     e.preventDefault();
+    
     let items = [...this.state.items];
 
     items.push({
-      date: this.state.date,
+      date: moment(this.state.date).format("D MMM"),
       category: this.state.category,
       description: this.state.description,
       amount: this.state.amount,
@@ -44,9 +46,13 @@ class Income extends Component {
   handleInputChange = (e) => {
     let name = e.target.name;
     let value = e.target.value;
-
     this.setState({
       [name]: value,
+    });
+  };
+  handleDate = (startDate) => {
+    this.setState({
+      date: startDate
     });
   };
 
@@ -59,6 +65,7 @@ class Income extends Component {
           handleInputChange={this.handleInputChange}
           newCategory={this.state.category}
           newDate={this.state.date}
+          handleDate={this.handleDate}
           newDescription={this.state.description}
           newAmount={this.state.amount}
           categoryArr={IncomeCategory}
